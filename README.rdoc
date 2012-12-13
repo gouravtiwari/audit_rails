@@ -1,3 +1,22 @@
 = AuditRails
+An action based auditor, which has link tracking as well.
 
+= Pre-requisites:
+For rails 3.1.x onwards:
+
+gem install audit_rails
+
+or in application’s Gemfile add:
+
+gem ‘audit_rails’
+
+= Install
+
+rails g audit_rails:install
+
+To add audit migration:
+
+rake audit_rails:install:migrations
+
+= License
 This project rocks and uses MIT-LICENSE.
