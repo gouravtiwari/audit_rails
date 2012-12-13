@@ -6,9 +6,6 @@
     <th>Controller</th>
     <th>Description</th>
     <th>User name</th>
-    <th></th>
-    <th></th>
-    <th></th>
   </tr>
 
 <% @audits.each do |audit| %>
@@ -17,12 +14,9 @@
     <td><%= audit.controller %></td>
     <td><%= audit.description %></td>
     <td><%= audit.user_name %></td>
-    <td><%= link_to 'Show', audit %></td>
-    <td><%= link_to 'Edit', edit_audit_path(audit) %></td>
-    <td><%= link_to 'Destroy', audit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
-<a href="#" class="visit-site">create_audit</a>
+<%=link_to "Create Test Audits", "http://www.google.com", :class => "visit-site" %>
