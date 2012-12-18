@@ -1,5 +1,5 @@
 = AuditRails
-An action based auditor, which has link tracking as well.
+An action based auditor, which has internal as well as outgoing link tracking.
 
 = Pre-requisites:
 For rails 3.1.x onwards:

@@ -15,3 +15,13 @@ gem "jquery-rails"
 
 # To use debugger
 # gem 'debugger'
+
+group :development, :test do
+  gem 'rspec-rails', "~>2.12.0"
+  gem "spork", "~> 1.0rc"
+  gem "guard-spork"
+  gem 'guard-rspec'
+  gem 'guard-bundler'
+  gem 'rb-fsevent', '~> 0.9.1'
+  gem "shoulda-matchers"
+end
