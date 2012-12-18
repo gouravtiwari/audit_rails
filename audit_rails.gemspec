@@ -7,11 +7,11 @@ require "audit_rails/version"
 Gem::Specification.new do |s|
   s.name        = "audit_rails"
   s.version     = AuditRails::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of AuditRails."
-  s.description = "TODO: Description of AuditRails."
+  s.authors     = ["Gourav Tiwari"]
+  s.email       = ["gouravtiwari21@gmail.com"]
+  s.homepage    = "https://github.com/gouravtiwari/audit_rails"
+  s.summary     = "An action based auditor, which has internal as well as outgoing link tracking."
+  s.description = "It is inspired from many great audit gems in rails community that audits model and I was looking for a gem which can audit based on actions as well as can audit link tracking. This gem just serve this purpose."
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
@@ -20,4 +20,5 @@ Gem::Specification.new do |s|
   # s.add_dependency "jquery-rails"
 
   s.add_development_dependency "sqlite3"
+  s.add_development_dependency "rspec-rails", "~>2.12.0"
 end

@@ -1,8 +1,10 @@
 = AuditRails
 An action based auditor, which has internal as well as outgoing link tracking.
 
+It is inspired from many great audit gems in rails community that audits model and I was looking for a gem which can audit based on actions as well as can audit link tracking. This gem just serve this purpose.
+
 = Pre-requisites:
-For rails 3.1.x onwards:
+For rails 3.1.x and ruby 1.9.3:
 
 gem install audit_rails
 
@@ -41,6 +43,12 @@ def current_user
   add_to_audit('login', 'sessions', "John Smith")
   super
 end
+
+= Contribute
+
+You are welcome to contribute and add more feature to this gem. I have added rspec and guard to it to run tests quickly. So running specs shouldn't be a problem.
+
+Please fork it, add specs and send a pull request!
 
 = License
 This project rocks and uses MIT-LICENSE.
