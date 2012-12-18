@@ -44,6 +44,8 @@ def current_user
   super
 end
 
+* To see all audits go to <app-url>/audit_rails/audits
+
 = Contribute
 
 You are welcome to contribute and add more feature to this gem. I have added rspec and guard to it to run tests quickly. So running specs shouldn't be a problem.
