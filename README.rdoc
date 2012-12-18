@@ -14,9 +14,25 @@ gem ‘audit_rails’
 
 rails g audit_rails:install
 
-To add audit migration:
+* To add audit migration:
 
 rake audit_rails:install:migrations
+
+* Add audit.js to application.js file:
+
+//= require audit_rails/audit
+
+* To add additional attributes to Audit (let's say book_id):
+1. Add attributes to migration generated from above rake task
+2. Inherit from AuditRails::Audit:
+#MyApp/app/models/audit.rb
+class Audit < AuditRails::Audit
+  attr_accessible :action, :controller, :description, :user_name, 
+    :book_id
+
+  #add associations as usual:
+  belongs_to :book
+end
 
 = License
 This project rocks and uses MIT-LICENSE.
