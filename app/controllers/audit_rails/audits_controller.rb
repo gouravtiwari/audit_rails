@@ -2,7 +2,6 @@ require_dependency "audit_rails/application_controller"
 
 module AuditRails
   class AuditsController < ApplicationController
-    before_filter(:only => :create) {|c| add_to_audit("visit-site", "xyz", "Fake User")}
 
     def index
       @audits = AuditRails::Audit.all
@@ -14,6 +13,7 @@ module AuditRails
     end
 
     def create
+      add_to_audit("visit-site", "xyz", "Fake User")
       render :nothing => true, :status => 200, :content_type => 'text/html'
     end
 
