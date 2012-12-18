@@ -9,6 +9,9 @@ module AuditRails
       respond_to do |format|
         format.html # index.html.erb
         format.json { render json: @audits }
+        format.xls { send_data @audits.to_xls(:columns => [:user_name, :action, :description, :created_at], 
+          :headers => ['User name', 'Action', 'Details', 'When?']), filename: 'audits.xls'}
+
       end
     end
 

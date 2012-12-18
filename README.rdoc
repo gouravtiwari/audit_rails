@@ -46,6 +46,14 @@ end
 
 * To see all audits go to <app-url>/audit_rails/audits
 
+* To download the audit report as xls file:
+1. Add this to initializers/mime_types.rb
+Mime::Type.register "application/vnd.ms-excel", :xls
+
+2. Use below link in views:
+link_to audit_rails.audits_path(:format => "xls")
+
+
 = Contribute
 
 You are welcome to contribute and add more feature to this gem. I have added rspec and guard to it to run tests quickly. So running specs shouldn't be a problem.
