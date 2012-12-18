@@ -6,6 +6,7 @@
     <th>Controller</th>
     <th>Description</th>
     <th>User name</th>
+    <th>When?</th>
   </tr>
 
 <% @audits.each do |audit| %>
@@ -14,6 +15,7 @@
     <td><%= audit.controller %></td>
     <td><%= audit.description %></td>
     <td><%= audit.user_name %></td>
+    <td><%= distance_of_time_in_words(audit.created_at, Time.now) %> ago</td>
   </tr>
 <% end %>
 </table>
