@@ -34,5 +34,13 @@ class Audit < AuditRails::Audit
   belongs_to :book
 end
 
+* To override controller's add_to_audit method (or the helper method), simply re-implement in application_controller.rb
+
+* To track user login (one per day), override current_user method in application controller, e.g.:
+def current_user
+  add_to_audit('login', 'sessions', "John Smith")
+  super
+end
+
 = License
 This project rocks and uses MIT-LICENSE.
