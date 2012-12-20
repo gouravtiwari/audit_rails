@@ -1,11 +1,12 @@
 require_dependency "audit_rails/application_controller"
+require 'to_xls' #TODO: need to figure out why this has to be required when it is in dependency
 
 module AuditRails
   class AuditsController < ApplicationController
 
     def index
       @audits = AuditRails::Audit.all
-  
+      
       respond_to do |format|
         format.html # index.html.erb
         format.json { render json: @audits }
