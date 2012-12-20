@@ -27,32 +27,34 @@ rake audit_rails:install:migrations
 * To add additional attributes to Audit (let's say book_id):
 1. Add attributes to migration generated from above rake task
 2. Inherit from AuditRails::Audit:
-#MyApp/app/models/audit.rb
-class Audit < AuditRails::Audit
-  attr_accessible :action, :controller, :description, :user_name, 
-    :book_id
+    #MyApp/app/models/audit.rb
+    class Audit < AuditRails::Audit
+      attr_accessible :action, :controller, :description, :user_name, 
+      :book_id
 
-  #add associations as usual:
-  belongs_to :book
-end
+      #add associations as usual:
+      belongs_to :book
+    end
 
 * To override controller's add_to_audit method (or the helper method), simply re-implement in application_controller.rb
 
 * To track user login (one per day), override current_user method in application controller, e.g.:
-def current_user
-  add_to_audit('login', 'sessions', "John Smith")
-  super
-end
+    def current_user
+      add_to_audit('login', 'sessions', "John Smith")
+      super
+    end
 
 * To see all audits go to <app-url>/audit_rails/audits
 
 * To download the audit report as xls file:
-1. Add this to initializers/mime_types.rb
-Mime::Type.register "application/vnd.ms-excel", :xls
+  * Add this to initializers/mime_types.rb
+      Mime::Type.register "application/vnd.ms-excel", :xls
 
-2. Use below link in views:
-link_to audit_rails.audits_path(:format => "xls")
+  * Use below link in views:
+      link_to audit_rails.audits_path(:format => "xls")
 
+= Changelog
+https://github.com/gouravtiwari/audit_rails/blob/master/README.rdoc
 
 = Contribute
 
