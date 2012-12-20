@@ -1,0 +1,9 @@
+== 0.0.2
+* Refactoring which helps in extending AuditRails::AuditsController
+* Enhanced documentation
+
+== 0.0.1
+* Added auditing for actions
+* Added auditing for link tracking
+* Added user logging per day auditing
+* Provision to add additional attributes for audit by overriding AuditRails model
