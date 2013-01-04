@@ -1,5 +1,4 @@
 require_dependency "audit_rails/application_controller"
-require 'to_xls' #TODO: need to figure out why this has to be required when it is in dependency
 
 module AuditRails
   class AuditsController < ApplicationController
