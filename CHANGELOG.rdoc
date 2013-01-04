@@ -1,3 +1,6 @@
+== 0.1.2
+* Cleaning of Gemfile.lock
+
 == 0.1.1
 * Added link to download report on audits
 
