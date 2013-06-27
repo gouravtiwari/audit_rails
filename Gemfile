@@ -17,12 +17,14 @@ gem "jquery-rails"
 # gem 'debugger'
 
 group :development, :test do
-  gem "rspec", "~> 2.13.0"
-  gem "rspec-rails", "~> 2.13.2"
+  gem 'rspec'
+  gem 'rspec-rails', "~>2.12.0"
   gem "spork", "~> 1.0rc"
   gem "guard-spork"
   gem 'guard-rspec'
   gem 'guard-bundler'
   gem 'rb-fsevent', '~> 0.9.1'
   gem "shoulda-matchers"
+  gem 'coveralls', :require => false
+  gem 'simplecov'
 end
