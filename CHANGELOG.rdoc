@@ -1,3 +1,6 @@
+== 0.1.4
+* Added Specs and fixed some typos
+
 == 0.1.2/0.1.3
 * Cleaning of Gemfile.lock
 * Fixed issue with to_xls, now no need to add to_xls to your Gemfile or requiring it.

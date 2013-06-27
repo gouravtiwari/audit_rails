@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.email       = ["gouravtiwari21@gmail.com"]
   s.homepage    = "https://github.com/gouravtiwari/audit_rails"
   s.summary     = "An action based auditor, which has internal as well as outgoing link tracking."
-  s.description = "An action based auditor, which has internal as well as outgoing link tracking."
+  s.description = "An action based auditor, which has internal as well as outgoing link tracking. This has now good amount of test coverage"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["spec/**/*"]
