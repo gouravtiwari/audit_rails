@@ -1,5 +1,4 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
-ENV["RAILS_ENV"] ||= 'test'
 require 'simplecov'
 require 'coveralls'
 
@@ -12,6 +11,9 @@ SimpleCov.start do
   add_filter 'lib'
   add_filter 'config'
 end
+
+ENV["RAILS_ENV"] ||= 'test'
+
 require File.expand_path("../../spec/dummy/config/environment", __FILE__)
 require 'rspec/rails'
 require 'rspec/autorun'

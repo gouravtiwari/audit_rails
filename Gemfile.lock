@@ -49,11 +49,6 @@ GEM
       thor
     diff-lcs (1.1.3)
     erubis (2.7.0)
-    factory_girl (4.2.0)
-      activesupport (>= 3.0.0)
-    factory_girl_rails (4.2.1)
-      factory_girl (~> 4.2.0)
-      railties (>= 3.0.0)
     ffi (1.9.0)
     formatador (0.2.4)
     guard (1.8.1)
@@ -174,7 +169,6 @@ PLATFORMS
 DEPENDENCIES
   audit_rails!
   coveralls
-  factory_girl_rails
   guard-bundler
   guard-rspec
   guard-spork

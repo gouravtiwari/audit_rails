@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe AuditRails::AuditsController do
+  # Need to push this to spec/routing directory
   context 'routes' do
     it { expect(:get => "/audits").to route_to( 
       :controller => "audit_rails/audits", 
@@ -14,13 +15,28 @@ describe AuditRails::AuditsController do
   end
 
   context "GET index" do
-    it "lists audits" do
-      audit = stub_model(AuditRails::Audit)
-      AuditRails::Audit.stub(:all) { [audit] }
-      
+    it "lists audits on page" do
+      audits = (1..3).map {|t| AuditRails::Audit.create(user_name: 'Fake User', 
+        description: "User logged on at #{t.days.ago}",
+        action: 'login',
+        controller: 'sessions')}
+
       get 'index'
 
-      expect(assigns(:audits)).to eq([audit])
+      expect(assigns(:audits)).to eq(audits)
+    end
+
+
+    it "lists audits in excel" do
+      audits = (1..3).map {|t| AuditRails::Audit.create(user_name: 'Fake User', 
+        description: "User logged on at #{t.days.ago}",
+        action: 'login',
+        controller: 'sessions')}
+
+      get 'index', format: 'xls'
+
+      response.should be_success
+      expect(assigns(:audits)).to eq(audits)
     end
   end
 
