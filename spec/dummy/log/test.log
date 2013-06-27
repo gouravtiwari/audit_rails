@@ -1,0 +1,162 @@
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (22.2ms)[0m  [1mINSERT INTO "audit_rails_audits" ("action", "controller", "created_at", "description", "updated_at", "user_name") VALUES (?, ?, ?, ?, ?, ?)[0m  [["action", "login"], ["controller", nil], ["created_at", Tue, 18 Dec 2012 02:17:00 UTC +00:00], ["description", nil], ["updated_at", Tue, 18 Dec 2012 02:17:00 UTC +00:00], ["user_name", "John Smith"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "audit_rails_audits" WHERE "audit_rails_audits"."action" = 'login' AND "audit_rails_audits"."user_name" = 'John Smith' AND ("audit_rails_audits"."created_at" BETWEEN '2012-12-17 00:00:00.000000' AND '2012-12-17 23:59:59.999999')[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (22.0ms)[0m  [1mINSERT INTO "audit_rails_audits" ("action", "controller", "created_at", "description", "updated_at", "user_name") VALUES (?, ?, ?, ?, ?, ?)[0m  [["action", "login"], ["controller", nil], ["created_at", Tue, 18 Dec 2012 02:24:22 UTC +00:00], ["description", nil], ["updated_at", Tue, 18 Dec 2012 02:24:22 UTC +00:00], ["user_name", "John Smith"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "audit_rails_audits" WHERE "audit_rails_audits"."action" = 'login' AND "audit_rails_audits"."user_name" = 'John Smith' AND ("audit_rails_audits"."created_at" BETWEEN '2012-12-17 00:00:00.000000' AND '2012-12-17 23:59:59.999999')[0m
+  [1m[35m (98.8ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (7.8ms)[0m  [1mINSERT INTO "audit_rails_audits" ("action", "controller", "created_at", "description", "updated_at", "user_name") VALUES (?, ?, ?, ?, ?, ?)[0m  [["action", "login"], ["controller", nil], ["created_at", Thu, 27 Jun 2013 14:36:54 UTC +00:00], ["description", nil], ["updated_at", Thu, 27 Jun 2013 14:36:54 UTC +00:00], ["user_name", "John Smith"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "audit_rails_audits" WHERE "audit_rails_audits"."action" = 'login' AND "audit_rails_audits"."user_name" = 'John Smith' AND ("audit_rails_audits"."created_at" BETWEEN '2013-06-27 00:00:00.000000' AND '2013-06-27 23:59:59.999999')[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (6.0ms)[0m  [1mINSERT INTO "audit_rails_audits" ("action", "controller", "created_at", "description", "updated_at", "user_name") VALUES (?, ?, ?, ?, ?, ?)[0m  [["action", "login"], ["controller", nil], ["created_at", Thu, 27 Jun 2013 14:41:23 UTC +00:00], ["description", nil], ["updated_at", Thu, 27 Jun 2013 14:41:23 UTC +00:00], ["user_name", "John Smith"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "audit_rails_audits" WHERE "audit_rails_audits"."action" = 'login' AND "audit_rails_audits"."user_name" = 'John Smith' AND ("audit_rails_audits"."created_at" BETWEEN '2013-06-27 00:00:00.000000' AND '2013-06-27 23:59:59.999999')[0m
+  [1m[35m (1.9ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (6.0ms)[0m  [1mINSERT INTO "audit_rails_audits" ("action", "controller", "created_at", "description", "updated_at", "user_name") VALUES (?, ?, ?, ?, ?, ?)[0m  [["action", "login"], ["controller", nil], ["created_at", Thu, 27 Jun 2013 14:46:26 UTC +00:00], ["description", nil], ["updated_at", Thu, 27 Jun 2013 14:46:26 UTC +00:00], ["user_name", "John Smith"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "audit_rails_audits" WHERE "audit_rails_audits"."action" = 'login' AND "audit_rails_audits"."user_name" = 'John Smith' AND ("audit_rails_audits"."created_at" BETWEEN '2013-06-27 00:00:00.000000' AND '2013-06-27 23:59:59.999999')[0m
+  [1m[35m (100.3ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (107.6ms)[0m  [1mINSERT INTO "audit_rails_audits" ("action", "controller", "created_at", "description", "updated_at", "user_name") VALUES (?, ?, ?, ?, ?, ?)[0m  [["action", "login"], ["controller", nil], ["created_at", Thu, 27 Jun 2013 15:04:20 UTC +00:00], ["description", nil], ["updated_at", Thu, 27 Jun 2013 15:04:20 UTC +00:00], ["user_name", "John Smith"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "audit_rails_audits" WHERE "audit_rails_audits"."action" = 'login' AND "audit_rails_audits"."user_name" = 'John Smith' AND ("audit_rails_audits"."created_at" BETWEEN '2013-06-27 00:00:00.000000' AND '2013-06-27 23:59:59.999999')[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (6.1ms)[0m  [1mINSERT INTO "audit_rails_audits" ("action", "controller", "created_at", "description", "updated_at", "user_name") VALUES (?, ?, ?, ?, ?, ?)[0m  [["action", "login"], ["controller", nil], ["created_at", Thu, 27 Jun 2013 15:05:11 UTC +00:00], ["description", nil], ["updated_at", Thu, 27 Jun 2013 15:05:11 UTC +00:00], ["user_name", "John Smith"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "audit_rails_audits" WHERE "audit_rails_audits"."action" = 'login' AND "audit_rails_audits"."user_name" = 'John Smith' AND ("audit_rails_audits"."created_at" BETWEEN '2013-06-27 00:00:00.000000' AND '2013-06-27 23:59:59.999999')[0m
+  [1m[35m (101.5ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (5.8ms)[0m  [1mINSERT INTO "audit_rails_audits" ("action", "controller", "created_at", "description", "updated_at", "user_name") VALUES (?, ?, ?, ?, ?, ?)[0m  [["action", "login"], ["controller", nil], ["created_at", Thu, 27 Jun 2013 15:05:27 UTC +00:00], ["description", nil], ["updated_at", Thu, 27 Jun 2013 15:05:27 UTC +00:00], ["user_name", "John Smith"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "audit_rails_audits" WHERE "audit_rails_audits"."action" = 'login' AND "audit_rails_audits"."user_name" = 'John Smith' AND ("audit_rails_audits"."created_at" BETWEEN '2013-06-27 00:00:00.000000' AND '2013-06-27 23:59:59.999999')[0m
+  [1m[35m (2.5ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+Processing by AuditRails::AuditsController#index as HTML
+Completed 500 Internal Server Error in 2ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (5.8ms)[0m  [1mINSERT INTO "audit_rails_audits" ("action", "controller", "created_at", "description", "updated_at", "user_name") VALUES (?, ?, ?, ?, ?, ?)[0m  [["action", "login"], ["controller", nil], ["created_at", Thu, 27 Jun 2013 15:08:11 UTC +00:00], ["description", nil], ["updated_at", Thu, 27 Jun 2013 15:08:11 UTC +00:00], ["user_name", "John Smith"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "audit_rails_audits" WHERE "audit_rails_audits"."action" = 'login' AND "audit_rails_audits"."user_name" = 'John Smith' AND ("audit_rails_audits"."created_at" BETWEEN '2013-06-27 00:00:00.000000' AND '2013-06-27 23:59:59.999999')[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by AuditRails::AuditsController#index as HTML
+Completed 500 Internal Server Error in 2ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (7.3ms)[0m  [1mINSERT INTO "audit_rails_audits" ("action", "controller", "created_at", "description", "updated_at", "user_name") VALUES (?, ?, ?, ?, ?, ?)[0m  [["action", "login"], ["controller", nil], ["created_at", Thu, 27 Jun 2013 15:15:44 UTC +00:00], ["description", nil], ["updated_at", Thu, 27 Jun 2013 15:15:44 UTC +00:00], ["user_name", "John Smith"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "audit_rails_audits" WHERE "audit_rails_audits"."action" = 'login' AND "audit_rails_audits"."user_name" = 'John Smith' AND ("audit_rails_audits"."created_at" BETWEEN '2013-06-27 00:00:00.000000' AND '2013-06-27 23:59:59.999999')[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (8.6ms)[0m  [1mINSERT INTO "audit_rails_audits" ("action", "controller", "created_at", "description", "updated_at", "user_name") VALUES (?, ?, ?, ?, ?, ?)[0m  [["action", "login"], ["controller", nil], ["created_at", Thu, 27 Jun 2013 15:19:51 UTC +00:00], ["description", nil], ["updated_at", Thu, 27 Jun 2013 15:19:51 UTC +00:00], ["user_name", "John Smith"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "audit_rails_audits" WHERE "audit_rails_audits"."action" = 'login' AND "audit_rails_audits"."user_name" = 'John Smith' AND ("audit_rails_audits"."created_at" BETWEEN '2013-06-27 00:00:00.000000' AND '2013-06-27 23:59:59.999999')[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by AuditRails::AuditsController#index as HTML
+Completed 500 Internal Server Error in 2ms
+  [1m[35m (0.1ms)[0m  rollback transaction
