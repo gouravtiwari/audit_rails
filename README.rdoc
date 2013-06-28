@@ -16,6 +16,7 @@ gem ‘audit_rails’
 
 rails g audit_rails:install
 
+= Usage
 === To add audit migration:
 
 rake audit_rails:install:migrations
