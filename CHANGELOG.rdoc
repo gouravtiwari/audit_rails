@@ -1,3 +1,8 @@
+== 1.0.0
+* Major version release
+* This gem has now good test coverage
+* It now allow using add_to_audit to be used as application's controller method
+
 == 0.1.4
 * Added Specs and fixed some typos
 

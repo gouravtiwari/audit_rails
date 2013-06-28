@@ -16,15 +16,15 @@ gem ‘audit_rails’
 
 rails g audit_rails:install
 
-* To add audit migration:
+== To add audit migration:
 
 rake audit_rails:install:migrations
 
-* Add audit.js to application.js file:
+== Add audit.js to application.js file:
 
 //= require audit_rails/audit
 
-* To add additional attributes to Audit (let's say book_id):
+== To add additional attributes to Audit (let's say book_id):
 1. Add attributes to migration generated from above rake task
 2. Inherit from AuditRails::Audit:
     #MyApp/app/models/audit.rb
@@ -36,17 +36,19 @@ rake audit_rails:install:migrations
       belongs_to :book
     end
 
-* To override controller's add_to_audit method (or the helper method), simply re-implement in application_controller.rb
+== To log user events, simply call 'add_to_audit' with desired parameters in any controller (as this is now a helper method included in application_controller.rb of application)
 
-* To track user login (one per day), override current_user method in application controller, e.g.:
+== To override controller's add_to_audit method (or the helper method), simply re-implement in application_controller.rb
+
+== To track user login (one per day), override current_user method in application controller, e.g.:
     def current_user
       add_to_audit('login', 'sessions', "John Smith")
       super
     end
 
-* To see all audits go to <app-url>/audit_rails/audits
+== To see all audits go to <app-url>/audit_rails/audits
 
-* To download the audit report as xls file:
+== To download the audit report as xls file:
   * Add this to initializers/mime_types.rb
       Mime::Type.register "application/vnd.ms-excel", :xls
 
@@ -54,7 +56,7 @@ rake audit_rails:install:migrations
       link_to audit_rails.audits_path(:format => "xls")
 
 = Changelog
-https://github.com/gouravtiwari/audit_rails/blob/master/README.rdoc
+https://github.com/gouravtiwari/audit_rails/blob/master/CHANGELOG.rdoc
 
 = Contribute
 
