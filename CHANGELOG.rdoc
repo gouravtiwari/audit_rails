@@ -1,3 +1,6 @@
+== 1.0.1
+* Fixed sample JS function as live() is deprecated
+
 == 1.0.0
 * Major version release
 * This gem has now good test coverage
