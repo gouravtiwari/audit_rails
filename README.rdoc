@@ -4,7 +4,7 @@ An action based auditor, which has internal as well as outgoing link tracking.
 It is inspired from many great audit gems in rails community that audits model and I was looking for a gem which can audit based on actions as well as can audit link tracking. This gem just serve this purpose.
 
 = Build Status
-{<img src="https://travis-ci.org/gouravtiwari/audit_rails.png" />}[https://travis-ci.org/gouravtiwari/audit_rails
+{<img src="https://travis-ci.org/gouravtiwari/audit_rails.png" />}[https://travis-ci.org/gouravtiwari/audit_rails]
 
 = Pre-requisites:
 For rails 3.1.x and ruby 1.9.3:
