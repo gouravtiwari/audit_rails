@@ -1,4 +1,6 @@
 = AuditRails
+{<img src="https://badge.fury.io/rb/audit_rails.png" alt="Gem Version" />}[http://badge.fury.io/rb/audit_rails]
+
 An action based auditor, which has internal as well as outgoing link tracking.
 
 It is inspired from many great audit gems in rails community that audits model and I was looking for a gem which can audit based on actions as well as can audit link tracking. This gem just serve this purpose.
