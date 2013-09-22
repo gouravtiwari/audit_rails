@@ -11,14 +11,14 @@ Gem::Specification.new do |s|
   s.email       = ["gouravtiwari21@gmail.com"]
   s.homepage    = "https://github.com/gouravtiwari/audit_rails"
   s.summary     = "An action based auditor, which has internal as well as outgoing link tracking."
-  s.description = "An action based auditor, which has internal as well as outgoing link tracking. This has now good amount of test coverage"
+  s.description = "An action based auditor, which has internal as well as outgoing link tracking. Provides Analytics for User count in line-chart."
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["spec/**/*"]
 
-  s.add_dependency "rails", "~> 3.2.9"
+  s.add_dependency "rails", "~> 3.2.14"
   s.add_runtime_dependency "to_xls", "~>1.5.1"
 
   s.add_development_dependency "sqlite3"
-  s.add_development_dependency "rspec-rails", "~>2.12.0"
+  s.add_development_dependency "rspec-rails"
 end
