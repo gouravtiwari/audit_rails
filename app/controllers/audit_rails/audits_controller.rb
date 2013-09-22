@@ -21,6 +21,7 @@ module AuditRails
     end
 
     def analytics
+      @analysis_by_user_name = AuditRails::Audit.analysis_by_user_name
     end
   end
 end

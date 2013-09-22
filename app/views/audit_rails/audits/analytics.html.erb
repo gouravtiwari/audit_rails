@@ -1,0 +1,25 @@
+<%= javascript_include_tag "Chart.min"%>
+<div id='analyticsByUser'>Analytics by User</div>
+<br/>
+<canvas id="canvas" height="450" width="600"></canvas>
+
+
+  <script>
+
+    var lineChartData = {
+      labels : <%= "#{@analysis_by_user_name.keys}".html_safe %>,
+      datasets : [
+        {
+          fillColor : "rgba(220,220,220,0.5)",
+          strokeColor : "rgba(220,220,220,1)",
+          pointColor : "rgba(220,220,220,1)",
+          pointStrokeColor : "#fff",
+          data : <%= @analysis_by_user_name.values %>
+        }
+      ]
+      
+    }
+
+  var myLine = new Chart(document.getElementById("canvas").getContext("2d")).Line(lineChartData);
+  
+  </script>

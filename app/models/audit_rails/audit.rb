@@ -8,5 +8,9 @@ module AuditRails
       
       audits.blank?
     end
+
+    def self.analysis_by_user_name
+      count(group: 'user_name')
+    end
   end
 end

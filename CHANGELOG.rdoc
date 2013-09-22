@@ -1,3 +1,6 @@
+== 1.1.0
+* Added Analytics feature for User count with Chart.js: https://github.com/nnnick/Chart.js
+
 == 1.0.1
 * Fixed sample JS function as live() is deprecated
 
