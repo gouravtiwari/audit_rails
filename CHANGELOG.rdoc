@@ -1,4 +1,4 @@
-== 1.1.0
+== 1.1.0/1.1.1
 * Added Analytics feature for User count with Chart.js: https://github.com/nnnick/Chart.js
 
 == 1.0.1
