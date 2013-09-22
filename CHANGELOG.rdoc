@@ -1,3 +1,6 @@
+== 1.1.2
+* Moved dev/test dependencies to gemspec file
+
 == 1.1.0/1.1.1
 * Added Analytics feature for User count with Chart.js: https://github.com/nnnick/Chart.js
 
