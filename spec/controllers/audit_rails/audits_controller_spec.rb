@@ -54,4 +54,15 @@ describe AuditRails::AuditsController do
       AuditRails::Audit.no_audit_entry_for_today?("visit-site", 'Fake User').should be_false
     end
   end
+
+  context "GET analytics" do
+    it "shows analytics of audits on page" do
+      # list should be a hash
+      AuditRails::Audit.stub(:analysis_by_user_name).and_return(list = {"Fake User"=>6, "John Smith"=>3})
+
+      get 'analytics'
+
+      expect(assigns(:analysis_by_user_name)).to eq(list)
+    end
+  end
 end
