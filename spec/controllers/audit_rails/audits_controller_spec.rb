@@ -12,6 +12,12 @@ describe AuditRails::AuditsController do
       :controller => "audit_rails/audits", 
       :action => "create" )
     }
+
+    it { expect(:get => "/audits/analytics").to route_to(
+      :controller => "audit_rails/audits",
+      :action => 'analytics'
+      )
+    }
   end
 
   context "GET index" do
