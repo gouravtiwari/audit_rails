@@ -177,7 +177,7 @@ DEPENDENCIES
   jquery-rails
   rb-fsevent (~> 0.9.1)
   rspec
-  rspec-rails (~> 2.12.0)
+  rspec-rails
   shoulda-matchers
   simplecov
   spork (~> 1.0rc)
