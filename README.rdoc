@@ -62,6 +62,9 @@ Override current_user method in application controller, e.g.:
 === To see all audits
 Go to <app-url>/audit_rails/audits
 
+=== To see Analytics
+Go to <app-url>/audit_rails/audits/analytics
+
 === To download the audit report as xls file:
   * Add this to initializers/mime_types.rb
       Mime::Type.register "application/vnd.ms-excel", :xls
