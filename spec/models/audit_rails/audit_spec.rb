@@ -25,4 +25,17 @@ describe AuditRails::Audit do
     end
   end
 
+    describe ".analysis_by_page_views" do
+    it "returns controller-action and count for all audits in the system" do
+      john = "John Smith"
+      fake = "Fake User"
+      audit = 3.times{
+        AuditRails::Audit.create!(:action => action = "Visit", :user_name => john)
+        AuditRails::Audit.create!(:action => action = "login", :user_name => fake)
+      }
+
+      AuditRails::Audit.analysis_by_page_views.should == {'login' => 3, 'Visit' => 3}
+    end
+  end
+
 end

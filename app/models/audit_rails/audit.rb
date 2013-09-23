@@ -12,5 +12,9 @@ module AuditRails
     def self.analysis_by_user_name
       count(group: 'user_name')
     end
+
+    def self.analysis_by_page_views
+      count(group: 'controller,action')
+    end
   end
 end

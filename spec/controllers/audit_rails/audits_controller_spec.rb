@@ -58,11 +58,13 @@ describe AuditRails::AuditsController do
   context "GET analytics" do
     it "shows analytics of audits on page" do
       # list should be a hash
-      AuditRails::Audit.stub(:analysis_by_user_name).and_return(list = {"Fake User"=>6, "John Smith"=>3})
+      AuditRails::Audit.stub(:analysis_by_user_name).and_return(user_list = {"Fake User"=>6, "John Smith"=>3})
+      AuditRails::Audit.stub(:analysis_by_page_views).and_return(page_list = {"visit-site"=>6, "login"=>3})
 
       get 'analytics'
 
-      expect(assigns(:analysis_by_user_name)).to eq(list)
+      expect(assigns(:analysis_by_user_name)).to eq(user_list)
+      expect(assigns(:analysis_by_page_views)).to eq(page_list)
     end
   end
 end

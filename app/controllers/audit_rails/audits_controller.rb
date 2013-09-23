@@ -22,6 +22,7 @@ module AuditRails
 
     def analytics
       @analysis_by_user_name = AuditRails::Audit.analysis_by_user_name
+      @analysis_by_page_views = AuditRails::Audit.analysis_by_page_views
     end
   end
 end
