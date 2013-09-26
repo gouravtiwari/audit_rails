@@ -42,15 +42,15 @@ or in application’s Gemfile add:
 
 #### To add additional attributes to Audit (let's say book_id):
 
-1. Add attributes to migration generated from above rake task
-2. Inherit from AuditRails::Audit:
-    
-    #MyApp/app/models/audit.rb
+Add attributes to migration generated from above rake task
+
+Inherit from AuditRails::Audit:
+
+    # MyApp/app/models/audit.rb
     class Audit < AuditRails::Audit
       attr_accessible :action, :controller, :description, :user_name, 
       :book_id
-
-      #add associations as usual:
+      # add associations as usual:
       belongs_to :book
     end
 
