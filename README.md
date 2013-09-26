@@ -9,10 +9,8 @@ Roughly it is doing similar to what Omniture does, but has very minimum features
 
 Now also has analytics(charts) for User counts
 
-#### User visit count:
-![User visit](https://github.com/gouravtiwari/audit_rails/raw/master/docs/user-clicks.png)
-
-#### Page view count:
+#### User visit & page view count:
+![User visit](https://github.com/gouravtiwari/audit_rails/raw/master/docs/user-clicks.png) 
 ![Page Views](https://github.com/gouravtiwari/audit_rails/raw/master/docs/page-views.png)
 
 ### Build Status
