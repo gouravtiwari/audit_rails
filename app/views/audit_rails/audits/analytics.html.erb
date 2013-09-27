@@ -1,15 +1,4 @@
-<%= javascript_include_tag "Chart.min"%>
 <div id='analyticsByUser'>Total user clicks : <%= @total %></div>
-<div>
-  <%= form_tag(filter_audits_path) do %>
-    Begin:
-    <%= text_field_tag('analytics[user_begin]')%>
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    End:
-    <%= text_field_tag('analytics[user_end]')%>
-    <%= submit_tag('filter')%>
-  <% end %>
-</div>
 <br/>
 <canvas id="userViews" height="450" width="600"></canvas>
 

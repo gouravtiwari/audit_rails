@@ -25,9 +25,5 @@ module AuditRails
       @analysis_by_page_views = AuditRails::Audit.analysis_by_page_views
       @total = AuditRails::Audit.count
     end
-
-    def filter
-      redirect_to analytics_audits_path
-    end
   end
 end

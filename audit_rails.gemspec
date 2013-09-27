@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.summary     = "An action based auditor, which has internal as well as outgoing link tracking."
   s.description = "An action based auditor, which has internal as well as outgoing link tracking. Provides Analytics for User count in line-chart."
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["spec/**/*"]
 
   s.add_dependency "rails", "~> 3.2.9"
