@@ -37,6 +37,7 @@ or in application’s Gemfile add:
 #### Add audit.js to application.js file:
 
     //= require audit_rails/audit
+    //= require audit_rails/Chart.min
 
 #### To add additional attributes to Audit (let's say book_id):
 
