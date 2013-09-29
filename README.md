@@ -17,7 +17,7 @@ Now also has analytics(charts) for User counts
 [![Build Status](https://travis-ci.org/gouravtiwari/audit_rails.png?branch=master)](https://travis-ci.org/gouravtiwari/audit_rails)
 
 ### Pre-requisites:
-For rails 3.x.x and ruby>1.9.2:
+For rails 4.0 & 3.2.6 + and ruby>1.9.2:
 
     gem install audit_rails
 
@@ -47,6 +47,7 @@ Inherit from AuditRails::Audit:
 
     # MyApp/app/models/audit.rb
     class Audit < AuditRails::Audit
+      # attr_accessible is only needed for Rails 3.2.6+ not needed for Rails 4+
       attr_accessible :action, :controller, :description, :user_name, 
       :book_id
       # add associations as usual:
