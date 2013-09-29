@@ -1,6 +1,12 @@
 module AuditRails
   class Audit < ActiveRecord::Base
-    attr_accessible :action, :controller, :description, :user_name
+    def self.needs_attr_accessible?
+      Rails::VERSION::MAJOR == 3
+    end
+
+    if needs_attr_accessible?
+      attr_accessible :action, :controller, :description, :user_name
+    end
 
     def self.no_audit_entry_for_today?(action_name, user_name)
       audits = where(action: action_name, user_name: user_name, 

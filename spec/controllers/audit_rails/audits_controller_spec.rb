@@ -22,7 +22,7 @@ describe AuditRails::AuditsController do
 
   context "GET index" do
     it "lists audits on page" do
-      audits = (1..3).map {|t| AuditRails::Audit.create(user_name: 'Fake User', 
+      audits = (1..3).map {|t| FactoryGirl.create(:audit, user_name: 'Fake User', 
         description: "User logged on at #{t.days.ago}",
         action: 'login',
         controller: 'sessions')}
@@ -34,7 +34,7 @@ describe AuditRails::AuditsController do
 
 
     it "lists audits in excel" do
-      audits = (1..3).map {|t| AuditRails::Audit.create(user_name: 'Fake User', 
+      audits = (1..3).map {|t| FactoryGirl.create(:audit, user_name: 'Fake User', 
         description: "User logged on at #{t.days.ago}",
         action: 'login',
         controller: 'sessions')}
