@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.homepage    = "https://github.com/gouravtiwari/audit_rails"
   s.summary     = "An action based auditor, which has internal as well as outgoing link tracking."
   s.description = "An action based auditor, which has internal as well as outgoing link tracking. Provides Analytics for User count in line-chart."
-  s.rubyforge_project = "audit_rails"
+  s.rubyforge_project = "arails"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["spec/**/*"]
