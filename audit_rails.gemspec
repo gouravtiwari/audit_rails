@@ -7,11 +7,13 @@ require "audit_rails/version"
 Gem::Specification.new do |s|
   s.name        = "audit_rails"
   s.version     = AuditRails::VERSION
+  s.licenses    = ['MIT']
   s.authors     = ["Gourav Tiwari"]
   s.email       = ["gouravtiwari21@gmail.com"]
   s.homepage    = "https://github.com/gouravtiwari/audit_rails"
   s.summary     = "An action based auditor, which has internal as well as outgoing link tracking."
   s.description = "An action based auditor, which has internal as well as outgoing link tracking. Provides Analytics for User count in line-chart."
+  s.rubyforge_project = "audit_rails"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["spec/**/*"]
