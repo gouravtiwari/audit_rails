@@ -1,8 +1,20 @@
-<div id='analyticsByUser'>Total user clicks : <%= @total %></div>
 <br/>
-<canvas id="userViews" height="450" width="600"></canvas>
-
-
+<div>
+  <%= form_tag(analytics_audits_path) do %>
+    Begin:
+    <%= text_field_tag('analytics[range_begin]', @range_begin)%>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    End:
+    <%= text_field_tag('analytics[range_end]', @range_end)%>
+    <%= submit_tag('filter')%>
+  <% end %>
+</div>
+<br/>
+<br/>
+<div class='left'>
+  <div id='analyticsByUser'>Total user clicks : <%= @total %></div>
+  <br/>
+  <canvas id="userViews" height="300" width="400"></canvas>
   <script>
 
     var barChartData = {
@@ -20,14 +32,13 @@
     }
 
   var myBar = new Chart(document.getElementById("userViews").getContext("2d")).Bar(barChartData, {scaleLineWidth : 2, scaleLineColor : "rgba(0,0,0,.1)", scaleSteps : <%= @analysis_by_user_name.values.max/5 + 2%>, scaleOverride : true, scaleStepWidth: 5});
-  
+
   </script>
-
-<div id='analyticsByPage'>Total page views: <%= @total %></div>
-<br/>
-<canvas id="pageViews" height="450" width="600"></canvas>
-
-
+</div>
+<div class='left'>
+  <div id='analyticsByPage'>Total page views: <%= @total %></div>
+  <br/>
+  <canvas id="pageViews" height="300" width="400"></canvas>
   <script>
 
     var lineChartData = {
@@ -47,3 +58,4 @@
   var myLine = new Chart(document.getElementById("pageViews").getContext("2d")).Line(lineChartData, {scaleLineWidth : 2, scaleLineColor : "rgba(0,0,0,.1)", scaleSteps : <%= @analysis_by_user_name.values.max/5 + 2%>, scaleOverride : true, scaleStepWidth: 5});
   
   </script>
+</div>

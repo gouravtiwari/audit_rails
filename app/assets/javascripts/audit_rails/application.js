@@ -12,4 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require audit_rails/jquery-ui
+//= require audit_rails/date-picker
+//= require audit_rails/Chart.min
+//= require audit_rails/audit
 //= require_tree .

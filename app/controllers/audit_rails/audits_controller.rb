@@ -21,11 +21,11 @@ module AuditRails
     end
 
     def analytics
-      range_begin = params[:range_begin]
-      range_end   = params[:range_end]
-      @analysis_by_user_name  = AuditRails::Audit.in_range(range_begin, range_end).analysis_by_user_name
-      @analysis_by_page_views = AuditRails::Audit.in_range(range_begin, range_end).analysis_by_page_views
-      @total = AuditRails::Audit.in_range(range_begin, range_end).count
+      @range_begin = params[:analytics] ? params[:analytics][:range_begin] : nil
+      @range_end   = params[:analytics] ? params[:analytics][:range_end] : nil
+      @analysis_by_user_name  = AuditRails::Audit.in_range(@range_begin, @range_end).analysis_by_user_name
+      @analysis_by_page_views = AuditRails::Audit.in_range(@range_begin, @range_end).analysis_by_page_views
+      @total = AuditRails::Audit.in_range(@range_begin, @range_end).count
     end
   end
 end
