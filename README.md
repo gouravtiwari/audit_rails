@@ -34,11 +34,6 @@ or in application’s Gemfile add:
 
     rake audit_rails:install:migrations
 
-#### Add audit.js to application.js file:
-
-    //= require audit_rails/audit
-    //= require audit_rails/Chart.min
-
 #### To add additional attributes to Audit (let's say book_id):
 
 Add attributes to migration generated from above rake task
