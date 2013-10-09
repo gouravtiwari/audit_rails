@@ -12,6 +12,31 @@ describe AuditRails::Audit do
     end
   end
 
+  describe ".in_range" do
+    # Not testing ActiveRecord, but need to make sure in_range is present and implemented correctly
+    before(:each) do
+      audit_1 = AuditRails::Audit.create!(:action => action = "login", :user_name => user = "John Smith")
+      audit_2 = AuditRails::Audit.create!(:action => action = "login", :user_name => user = "John Smith")
+      audit_3 = AuditRails::Audit.create!(:action => action = "login", :user_name => user = "John Smith")
+
+      audit_1.update_attribute('created_at', 2.days.ago)
+      audit_2.update_attribute('created_at', 3.days.ago)
+      audit_3.update_attribute('created_at', 5.days.ago)
+    end
+
+    it 'returns audits created in a given date range in string format' do
+      AuditRails::Audit.in_range(4.days.ago.strftime('%Y-%m-%d'), 1.days.ago.strftime('%Y-%m-%d')).count.should == 2
+    end
+
+    it 'returns audits created in a given date range in date format' do
+      AuditRails::Audit.in_range(4.days.ago, 1.days.ago).count.should == 2
+    end
+
+    it 'returns all audits when range is nil' do
+      AuditRails::Audit.in_range(nil, nil).count.should == 3
+    end
+  end
+
   describe ".analysis_by_user_name" do
     it "returns users and count for all audits in the system" do
       john = "John Smith"
