@@ -16,7 +16,7 @@ Now also has analytics(charts) for User counts
 ![Page Views](https://github.com/gouravtiwari/audit_rails/raw/master/docs/page-views.png)
 
 ### Build Status
-[![Build Status](https://travis-ci.org/gouravtiwari/audit_rails.png?branch=master)](https://travis-ci.org/gouravtiwari/audit_rails)
+[![Build Status](https://travis-ci.org/gouravtiwari/audit_rails.png?branch=master)](https://travis-ci.org/gouravtiwari/audit_rails)[![Coverage Status](https://coveralls.io/repos/gouravtiwari/audit_rails/badge.png?branch=master)](https://coveralls.io/r/gouravtiwari/audit_rails?branch=master)
 
 ### Pre-requisites:
 For rails 4.0 & 3.2.6 + and ruby>1.9.2:
