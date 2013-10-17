@@ -1,16 +1,17 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
-require 'simplecov'
-# require 'coveralls'
+# require 'simplecov'
+require 'coveralls'
+Coveralls.wear!
 
-SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
-  SimpleCov::Formatter::HTMLFormatter,
-  # Coveralls::SimpleCov::Formatter
-]
-SimpleCov.start do
-  add_filter 'spec'
-  add_filter 'lib'
-  add_filter 'config'
-end
+# SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
+#   SimpleCov::Formatter::HTMLFormatter,
+#   # Coveralls::SimpleCov::Formatter
+# ]
+# SimpleCov.start do
+#   add_filter 'spec'
+#   add_filter 'lib'
+#   add_filter 'config'
+# end
 
 ENV["RAILS_ENV"] ||= 'test'
 
