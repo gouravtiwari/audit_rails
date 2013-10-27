@@ -1,0 +1,7 @@
+<div class="alert alert-warning">
+  <% if no_audits %>
+    No audits available as of now, please visit one of the auditable page or click this link and generate <%= link_to "a test audit", "http://www.google.com", :class => "visit-site" %>
+  <% else %>
+    No audits available. Perhaps no one visited auditable pages in the given date range?
+  <% end %>
+</div>

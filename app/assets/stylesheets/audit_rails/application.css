@@ -10,6 +10,9 @@
  *
  *= require audit_rails/jquery-ui
  *= require audit_rails/date-picker
+ *= require audit_rails/bootstrap
+ *= require audit_rails/theme
+ *= require audit_rails/bootstrap-theme
  *= require_self
  *= require_tree .
  */

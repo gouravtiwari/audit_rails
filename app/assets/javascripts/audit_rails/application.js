@@ -16,4 +16,5 @@
 //= require audit_rails/date-picker
 //= require audit_rails/Chart.min
 //= require audit_rails/audit
+//= require audit_rails/bootstrap
 //= require_tree .

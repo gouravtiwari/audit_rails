@@ -7,8 +7,26 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="<%= active_class('index')%>">
+            <%= link_to 'Audits', audits_path %>
+          </li>
+          <li class="<%= active_class('analytics')%>">
+            <%= link_to 'Analytics', analytics_audits_path %>
+          </li>
+          <li>
+            <%= link_to 'Download Audit Report', audit_rails.audits_path(:format => "xls")  %>
+          </li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+  <div class='container theme-showcase'>
+    <%= yield %>
+  </div>
 
 </body>
 </html>
