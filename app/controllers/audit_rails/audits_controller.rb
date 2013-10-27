@@ -4,7 +4,7 @@ module AuditRails
   class AuditsController < ApplicationController
 
     def index
-      @audits = AuditRails::Audit.all
+      @audits = AuditRails::Audit.reverse_chronological
       
       respond_to do |format|
         format.html # index.html.erb
@@ -26,6 +26,7 @@ module AuditRails
       @analysis_by_user_name  = AuditRails::Audit.in_range(@range_begin, @range_end).analysis_by_user_name
       @analysis_by_page_views = AuditRails::Audit.in_range(@range_begin, @range_end).analysis_by_page_views
       @total = AuditRails::Audit.in_range(@range_begin, @range_end).count
+      @no_audits = AuditRails::Audit.count == 0
     end
   end
 end

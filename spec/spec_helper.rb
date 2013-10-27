@@ -50,5 +50,9 @@ RSpec.configure do |config|
   # the seed, which is printed after each run.
   #     --seed 1234
   config.order = "random"
-  config.before(:each) { @routes = AuditRails::Engine.routes }
+  config.before(:each) do 
+    @routes = AuditRails::Engine.routes 
+    @now = Time.now
+    Time.stub!(:now).and_return(@now)
+  end
 end

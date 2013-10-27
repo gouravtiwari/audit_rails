@@ -16,6 +16,8 @@ module AuditRails
       where(created_at: range_begin.to_date.beginning_of_day..range_end.to_date.end_of_day)
       }
 
+    scope :reverse_chronological, ->{order('created_at DESC')}
+
     def self.no_audit_entry_for_today?(action_name, user_name)
       audits = where(action: action_name, user_name: user_name, 
         created_at: Time.now.to_date.beginning_of_day..Time.now.to_date.end_of_day)

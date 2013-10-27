@@ -12,5 +12,13 @@ module AuditRails
           description: description)
       end
     end
+
+    def active?(action_name)
+      controller.action_name == action_name
+    end
+
+    def active_class(action_name)
+      active?(action_name) ? 'active' : ''
+    end
   end
 end
