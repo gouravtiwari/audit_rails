@@ -1,5 +1,5 @@
 ## AuditRails
-[![Gem Version](https://badge.fury.io/rb/audit_rails.png)](http://badge.fury.io/rb/audit_rails)
+[![Gem Version](https://badge.fury.io/rb/audit_rails.png)](http://badge.fury.io/rb/audit_rails)[![Build Status](https://travis-ci.org/gouravtiwari/audit_rails.png?branch=master)](https://travis-ci.org/gouravtiwari/audit_rails)[![Coverage Status](https://coveralls.io/repos/gouravtiwari/audit_rails/badge.png?branch=master)](https://coveralls.io/r/gouravtiwari/audit_rails?branch=master)
 
 An action based auditor, which has internal as well as outgoing link tracking.
 
@@ -10,13 +10,8 @@ Roughly it is doing similar to what Omniture does, but has very minimum features
 Now also has analytics(charts) for User counts
 
 #### User visit & page view count by date range:
-![Audits](https://github.com/gouravtiwari/audit_rails/raw/master/docs/audit-rails.png) 
+![Audits](https://github.com/gouravtiwari/audit_rails/raw/master/docs/audit-rails.png)
 
-![User visit](https://github.com/gouravtiwari/audit_rails/raw/master/docs/user-clicks.png) 
-![Page Views](https://github.com/gouravtiwari/audit_rails/raw/master/docs/page-views.png)
-
-### Build Status
-[![Build Status](https://travis-ci.org/gouravtiwari/audit_rails.png?branch=master)](https://travis-ci.org/gouravtiwari/audit_rails)[![Coverage Status](https://coveralls.io/repos/gouravtiwari/audit_rails/badge.png?branch=master)](https://coveralls.io/r/gouravtiwari/audit_rails?branch=master)
 
 ### Pre-requisites:
 For rails 4.0 & 3.2.6 + and ruby>1.9.2:
