@@ -55,11 +55,11 @@ describe AuditRails::Audit do
       john = "John Smith"
       fake = "Fake User"
       audit = 3.times{
-        AuditRails::Audit.create!(:action => action = "Visit", :user_name => john)
-        AuditRails::Audit.create!(:action => action = "login", :user_name => fake)
+        AuditRails::Audit.create!(:action => action = "visit", :user_name => john, :controller => 'home')
+        AuditRails::Audit.create!(:action => action = "login", :user_name => fake, :controller => 'session')
       }
 
-      AuditRails::Audit.analysis_by_page_views.should == {'login' => 3, 'Visit' => 3}
+      AuditRails::Audit.analysis_by_page_views.should == {['session', 'login'] => 3, ['home','visit'] => 3}
     end
   end
 
