@@ -17,6 +17,8 @@ module AuditRails
       }
 
     scope :reverse_chronological, ->{order('created_at DESC')}
+    scope :group_by_controller_action, ->{group('controller, action')}
+    scope :group_by_user_name, ->{group('user_name')}
 
     def self.no_audit_entry_for_today?(action_name, user_name)
       audits = where(action: action_name, user_name: user_name, 
@@ -26,11 +28,11 @@ module AuditRails
     end
 
     def self.analysis_by_user_name
-      count(group: 'user_name')
+      group_by_user_name.count
     end
 
     def self.analysis_by_page_views
-      count(group: 'controller,action')
+      group_by_controller_action.count
     end
   end
 end
