@@ -1,3 +1,7 @@
+== 1.1.10
+* Added link to application home page to navigate to application that includes this gem
+* Updated chart options
+
 == 1.1.9
 * Fixed bug where page views was showing only action name
 * Fixed Deprication warnings for count method
