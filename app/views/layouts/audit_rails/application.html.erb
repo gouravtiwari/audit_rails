@@ -11,6 +11,10 @@
     <div class="container">
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
+          <li>
+            <%= link_to 'Home', '/' %>
+          </li>
+
           <li class="<%= active_class('index')%>">
             <%= link_to 'Audits', audits_path %>
           </li>
