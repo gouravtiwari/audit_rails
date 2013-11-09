@@ -9,9 +9,13 @@ Roughly it is doing similar to what Omniture does, but has very minimum features
 
 Now also has analytics(charts) for User counts
 
+### Example
+
+* [Audit Rails example](http://www.audit-rails.info)
+* [Audit Rails example code](https://github.com/gouravtiwari/audit_rails_example)
+
 #### User visit & page view count by date range:
 ![Audits](https://github.com/gouravtiwari/audit_rails/raw/master/docs/audit-rails.png)
-
 
 ### Pre-requisites:
 For rails 4.0 & 3.2.6 + and ruby>1.9.2:
