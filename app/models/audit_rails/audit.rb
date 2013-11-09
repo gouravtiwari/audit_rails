@@ -17,7 +17,7 @@ module AuditRails
       }
 
     scope :reverse_chronological, ->{order('created_at DESC')}
-    scope :group_by_controller_action, ->{group('controller, action')}
+    scope :group_by_controller_action, ->{group([:controller, :action])}
     scope :group_by_user_name, ->{group('user_name')}
 
     def self.no_audit_entry_for_today?(action_name, user_name)
