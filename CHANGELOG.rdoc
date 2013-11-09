@@ -1,3 +1,7 @@
+== 1.1.9
+* Fixed bug where page views was showing only action name
+* Fixed Deprication warnings for count method
+
 == 1.1.8
 * Added bootstrap layout
 * changed audits order to reverse chronological order
