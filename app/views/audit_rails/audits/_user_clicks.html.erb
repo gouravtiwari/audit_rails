@@ -18,7 +18,7 @@
       
     }
 
-  var myBar = new Chart(document.getElementById("userViews").getContext("2d")).Bar(barChartData, {scaleLineWidth : 2, scaleLineColor : "rgba(0,0,0,.1)", scaleSteps : <%= @analysis_by_user_name.values.max/5 + 2%>, scaleOverride : true, scaleStepWidth: 5});
+  var myBar = new Chart(document.getElementById("userViews").getContext("2d")).Bar(barChartData, {scaleLineWidth : 2, scaleLineColor : "rgba(0,0,0,.1)", scaleSteps : <%= @analysis_by_user_name.values.max/5 + 2%>});
 
   </script>
 </div>

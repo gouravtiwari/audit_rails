@@ -18,7 +18,7 @@
       
     }
 
-  var myLine = new Chart(document.getElementById("pageViews").getContext("2d")).Line(lineChartData, {scaleLineWidth : 2, scaleLineColor : "rgba(0,0,0,.1)", scaleSteps : <%= @analysis_by_user_name.values.max/5 + 2%>, scaleOverride : true, scaleStepWidth: 5});
+  var myLine = new Chart(document.getElementById("pageViews").getContext("2d")).Line(lineChartData, {scaleLineWidth : 2, scaleLineColor : "rgba(0,0,0,.1)", scaleSteps : <%= @analysis_by_user_name.values.max/5 + 2%>});
   
   </script>
 </div>
