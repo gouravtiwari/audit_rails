@@ -5,7 +5,7 @@ module AuditRails
     end
 
     if needs_attr_accessible?
-      attr_accessible :action, :controller, :description, :user_name
+      attr_accessible :action, :controller, :description, :user_name, :ip_address
     end
 
     # Supports both string and date format of range given
@@ -19,6 +19,7 @@ module AuditRails
     scope :reverse_chronological, ->{order('created_at DESC')}
     scope :group_by_controller_action, ->{group([:controller, :action])}
     scope :group_by_user_name, ->{group('user_name')}
+    scope :group_by_ip_address, ->{group('ip_address')}
 
     def self.no_audit_entry_for_today?(action_name, user_name)
       audits = where(action: action_name, user_name: user_name, 
@@ -33,6 +34,14 @@ module AuditRails
 
     def self.analysis_by_page_views
       group_by_controller_action.count
+    end
+
+    def self.unique_visitor_count
+      group_by_ip_address.count.values.size
+    end
+
+    def self.visitor_count
+      group_by_ip_address.count.values.sum
     end
   end
 end

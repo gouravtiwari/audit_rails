@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(:version => 20121213191242) do
     t.string   "controller"
     t.string   "description"
     t.string   "user_name"
+    t.string   "ip_address"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
