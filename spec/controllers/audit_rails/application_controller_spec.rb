@@ -9,7 +9,14 @@ describe AuditRails::ApplicationController do
     # or you call it from current_user method
     before_filter do |c| 
       app_controller = AuditRails::ApplicationController.new
+      setup
       app_controller.add_to_audit(request.params[:action], request.params[:controller], 'Fake User', 'User logged in')
+    end
+
+    def setup
+      def @request.remote_ip
+        '127.0.0.1'
+      end
     end
 
     # A fake login
