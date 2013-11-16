@@ -2,7 +2,7 @@
   <h1>Analytics</h1>
 </div>
 
-<%= render partial: 'form' %>
+<%= render partial: 'form', locals: {path: audit_rails.analytics_audits_path} %>
 <br/>
 <br/>
 <% if @analysis_by_user_name == {} %>

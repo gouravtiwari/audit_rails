@@ -1,0 +1,12 @@
+<% audits.each do |audit| %>
+  <div class='audit-row well'>
+    <div class='audit-title'>
+     <%= "#{audit.controller}/" if audit.controller %><%= audit.action %> by <%= audit.user_name %> about <%= distance_of_time_in_words(audit.created_at, Time.now) %> ago
+   </div>
+   <% if audit.description %>
+     <div class='audit-description'>
+      <%= audit.description %>
+     </div>
+  <% end %>
+  </div>
+<% end %>

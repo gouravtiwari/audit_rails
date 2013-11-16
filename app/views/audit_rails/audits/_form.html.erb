@@ -1,10 +1,5 @@
-<div>
-  <%= form_tag(analytics_audits_path) do %>
-    Begin:
-    <%= text_field_tag('analytics[range_begin]', @range_begin)%>
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    End:
-    <%= text_field_tag('analytics[range_end]', @range_end)%>
-    <%= submit_tag('filter')%>
+<div class='row'>
+  <%= form_tag(path) do %>
+    <%= render partial: 'form_elements' %>
   <% end %>
 </div>

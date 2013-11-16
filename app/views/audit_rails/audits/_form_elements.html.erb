@@ -1,0 +1,20 @@
+<div class='col-sm-2'>
+  <div class="input-group">
+    <%= text_field_tag('analytics[range_begin]', @range_begin, placeholder: 'Begin', class: 'form-control')%>
+  </div>
+</div>
+<div class='col-sm-2'>
+  <div class="input-group">
+    <%= text_field_tag('analytics[range_end]', @range_end, placeholder: 'End', class: 'form-control')%>
+  </div>
+</div>
+<div class='col-sm-1'>
+  <div class="input-group">
+    <%= submit_tag('Filter', class: 'btn btn-primary btn-sm')%>
+  </div>
+</div>
+<div class='col-sm-2'>
+  <div class="input-group">
+    <%= submit_tag('Download Filtered Report',  class: 'btn btn-primary btn-sm')  %>
+  </div>
+</div>

@@ -1,29 +1,9 @@
 <div class="page-header">
   <h1>Audits</h1>
 </div>
-
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Action</th>
-      <th>Controller</th>
-      <th>Description</th>
-      <th>User name</th>
-      <th>When?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @audits.each do |audit| %>
-      <tr>
-        <td><%= audit.action %></td>
-        <td><%= audit.controller %></td>
-        <td><%= audit.description %></td>
-        <td><%= audit.user_name %></td>
-        <td><%= distance_of_time_in_words(audit.created_at, Time.now) %> ago</td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br />
+<%= render partial: 'form', locals: {path: audit_rails.audits_path} %>
+<br>
 <%= link_to("Create Test Audits", "http://www.google.com", :class => "visit-site") if Rails.env == 'development' %>
+<br><br>
+<%= render(partial: 'no_audits_available', locals: {no_audits: @no_audits}) if @audits.size == 0 %>
+<%= render(partial: 'list', locals: {audits: @audits}) %>

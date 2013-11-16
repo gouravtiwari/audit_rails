@@ -49,7 +49,7 @@ describe AuditRails::AuditsController do
         audit
       end
 
-      get 'index', format: 'xls'
+      get 'index', commit: 'Download Filtered Report'
 
       response.should be_success
       expect(assigns(:audits)).to eq(audits)
