@@ -46,7 +46,7 @@ describe AuditRails::Audit do
         AuditRails::Audit.create!(:action => action = "Visit", :user_name => fake)
       }
 
-      AuditRails::Audit.analysis_by_user_name.should == {john => 3, fake => 3}
+      AuditRails::Audit.analysis_by_user_name.should == "[{\"user\":\"#{fake}\",\"count\":3},{\"user\":\"#{john}\",\"count\":3}]"
     end
   end
 
@@ -59,7 +59,7 @@ describe AuditRails::Audit do
         AuditRails::Audit.create!(:action => action = "login", :user_name => fake, :controller => 'session')
       }
 
-      AuditRails::Audit.analysis_by_page_views.should == {['session', 'login'] => 3, ['home','visit'] => 3}
+      AuditRails::Audit.analysis_by_page_views.should == "[{\"page\":\"0\",\"count\":0},{\"page\":\"home/visit\",\"count\":3},{\"page\":\"session/login\",\"count\":3}]"
     end
   end
 

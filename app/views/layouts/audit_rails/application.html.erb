@@ -3,7 +3,6 @@
 <head>
   <title>AuditRails</title>
   <%= stylesheet_link_tag    "audit_rails/application", :media => "all" %>
-  <%= javascript_include_tag "audit_rails/application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -28,6 +27,6 @@
   <div class='container theme-showcase'>
     <%= yield %>
   </div>
-
+  <%= javascript_include_tag "audit_rails/application" %> 
 </body>
 </html>

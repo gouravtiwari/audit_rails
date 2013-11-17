@@ -1,24 +1,9 @@
 <div class='left'>
-  <div id='analyticsByUser'>Total user clicks : <%= @total %></div>
+  <ul class="nav nav-pills">
+    <li class="active">
+      <a href="#">Total user clicks <span class="badge"><%= @total %></span></a>
+    </li>
+  </ul>
   <br/>
-  <canvas id="userViews" height="300" width="400"></canvas>
-  <script>
-
-    var barChartData = {
-      labels : <%= "#{@analysis_by_user_name.keys}".html_safe %>,
-      datasets : [
-        {
-          fillColor : "rgba(151,187,205,0.5)",
-          strokeColor : "rgba(220,220,220,1)",
-          pointColor : "rgba(220,220,220,1)",
-          pointStrokeColor : "#fff",
-          data : <%= @analysis_by_user_name.values %>
-        }
-      ]
-      
-    }
-
-  var myBar = new Chart(document.getElementById("userViews").getContext("2d")).Bar(barChartData, {scaleLineWidth : 2, scaleLineColor : "rgba(0,0,0,.1)", scaleSteps : <%= @analysis_by_user_name.values.max/5 + 2%>});
-
-  </script>
+  <div id='userViewsCount' data-visit-count='<%= @analysis_by_user_name %>'></div>
 </div>
