@@ -33,8 +33,7 @@ module AuditRails
     end
 
     def self.analysis_by_page_views
-      ([{page: '0', count: 0}] + 
-        group_by_controller_action.count.map{|k,v| {'page' => k.join('/'), 'count' => v}}).to_json
+      group_by_controller_action.count.map{|k,v| {'page' => k.join('/'), 'count' => v}}.to_json
     end
 
     def self.unique_visitor_count

@@ -59,7 +59,7 @@ describe AuditRails::Audit do
         AuditRails::Audit.create!(:action => action = "login", :user_name => fake, :controller => 'session')
       }
 
-      AuditRails::Audit.analysis_by_page_views.should == "[{\"page\":\"0\",\"count\":0},{\"page\":\"home/visit\",\"count\":3},{\"page\":\"session/login\",\"count\":3}]"
+      AuditRails::Audit.analysis_by_page_views.should == "[{\"page\":\"home/visit\",\"count\":3},{\"page\":\"session/login\",\"count\":3}]"
     end
   end
 
