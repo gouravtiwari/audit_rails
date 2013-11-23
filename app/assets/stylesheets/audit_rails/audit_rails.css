@@ -63,11 +63,31 @@
   top: 100%;
   left: 0;
 }
+
 .page-views{
-  width: 181px;
+  width: 245px;
 }
-#pageViewsByUser{
-  padding-left: 70px;
+
+a.active-item, a.active-item:hover{
+  background-color: skyblue;
+  color: white;
+}
+a.active-item span.badge{
+  background-color: white;
+  color: #428bca;
+}
+
+#userNameToShow{
   padding-top: 30px;
-  width: 750px;
+  width: 680px;
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+}
+
+
+#pageViewsByUser{
+  padding-left: 45px;
+  padding-top: 50px;
+  width: 680px;
 }

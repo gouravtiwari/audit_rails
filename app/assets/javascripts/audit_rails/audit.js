@@ -8,11 +8,16 @@ $(document).on("click", 'a.visit-site', function() {
 $(document).ready(function(){
   var firstUser = $('a[data-user]')
   if(firstUser[0] != undefined){
-    pageViewsForUser(firstUser.attr('data-user'));
+    var user = firstUser.attr('data-user');
+    $('#userNameToShow').text('Pages viewed by '+user);
+    $('a[data-user="'+user+'"]').addClass('active-item');
+    pageViewsForUser(user);
   }
 
   $('a[data-user]').on('click', function(){
     d3.select("div#pageViewsByUser>svg").remove();
+    $('a.list-group-item').removeClass('active-item');
+    $(this).addClass('active-item');
     pageViewsForUser($(this).attr('data-user'));
   });
 });

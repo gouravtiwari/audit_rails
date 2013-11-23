@@ -2,9 +2,9 @@ function pageViewsForUser(userName){
 
     var data  = JSON.parse( $('a[data-user="'+ userName +'"]').attr('data-page-visits'));
 
-    var right = d3.max([20, (650 - data.length * 50)]);
+    var right = d3.max([20, (620 - data.length * 50)]);
     var margin = {top: 40, right: right, bottom: 100, left: 40},
-        width = 680 - margin.left - margin.right,
+        width = 650 - margin.left - margin.right,
         height = 360 - margin.top - margin.bottom;
 
     var x = d3.scale.ordinal()
@@ -58,9 +58,6 @@ function pageViewsForUser(userName){
         .attr("transform", "rotate(-90)")
         .attr("y", -40)
         .attr("x", -80)
-        .attr("dy", "0.71em")
-        .style("text-anchor", "end")
-        .text("Page Views");
 
     svg.selectAll(".bar")
         .data(data)

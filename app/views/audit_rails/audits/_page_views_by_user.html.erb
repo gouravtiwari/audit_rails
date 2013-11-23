@@ -2,17 +2,20 @@
 <div class='left page-views'>
   <ul class="nav nav-pills">
     <li class="active">
-      <a href="#page-views-by-user" name='page-views-by-user'>Total page views <span class="badge"><%= @total %></span></a>
+      <a href="#page-views-by-user" name='page-views-by-user'>Pages viewed by individual users</span></a>
     </li>
   </ul>
   <br/>
-  <ul class="list-group">
+  <div class="list-group page-views">
     <% JSON.parse(@analysis_by_user_name).each do |user_hsh| %>
-      <li class="list-group-item">
+      <a href="#page-views-by-user" class="list-group-item" data-user='<%=user_hsh["user"]%>' data-page-visits='<%= page_visits_by_user(user_hsh['user'])%>'><%= user_hsh["user"] %> - 20%
         <span class="badge"><%= user_hsh["count"] %></span>
-        <a href="#page-views-by-user" data-user='<%=user_hsh["user"]%>' data-page-visits='<%= page_visits_by_user(user_hsh['user'])%>'><%= user_hsh["user"] %></a>
-      </li>
+      </a>
     <% end %>
-  </ul>
+  </div>
 </div>
-<div id='pageViewsByUser' class='left'></div>
+<div class='left'>
+  <div class='clear'></div>
+  <div id="userNameToShow"></div>
+  <div id='pageViewsByUser'></div>
+</div>
