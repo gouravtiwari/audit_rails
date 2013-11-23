@@ -4,3 +4,15 @@ $(document).on("click", 'a.visit-site', function() {
 	window.open(this.href);
 	return false;
 });
+
+$(document).ready(function(){
+  var firstUser = $('a[data-user]')
+  if(firstUser[0] != undefined){
+    pageViewsForUser(firstUser.attr('data-user'));
+  }
+
+  $('a[data-user]').on('click', function(){
+    d3.select("div#pageViewsByUser>svg").remove();
+    pageViewsForUser($(this).attr('data-user'));
+  });
+});

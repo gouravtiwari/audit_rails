@@ -63,3 +63,11 @@
   top: 100%;
   left: 0;
 }
+.page-views{
+  width: 175px;
+}
+#pageViewsByUser{
+  padding-left: 70px;
+  padding-top: 30px;
+  width: 750px;
+}

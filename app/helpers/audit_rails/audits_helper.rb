@@ -25,5 +25,9 @@ module AuditRails
     def active_class(action_name)
       active?(action_name) ? 'active' : ''
     end
+
+    def page_visits_by_user(user)
+      JSON.parse(@analysis_per_user_by_page_views)[user].to_json
+    end
   end
 end

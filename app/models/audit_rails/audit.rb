@@ -36,6 +36,15 @@ module AuditRails
       group_by_controller_action.count.map{|k,v| {'page' => k.join('/'), 'count' => v}}.to_json
     end
 
+    def self.analysis_per_user_by_page_views
+      users = {}
+      group_by_user_name.group_by_controller_action.count.map do |k, v|
+        value = [{"page" => "#{k[1]}/#{k[2]}", "count" => v}]
+        users[k[0]] = users[k[0]] ? users[k[0]] + value : value
+      end
+      users.to_json
+    end
+
     def self.unique_visitor_count
       group_by_ip_address.count.values.size
     end
