@@ -50,7 +50,7 @@ describe AuditRails::Audit do
     end
   end
 
-    describe ".analysis_by_page_views" do
+  describe ".analysis_by_page_views" do
     it "returns controller-action and count for all audits in the system" do
       john = "John Smith"
       fake = "Fake User"
@@ -60,6 +60,50 @@ describe AuditRails::Audit do
       }
 
       AuditRails::Audit.analysis_by_page_views.should == "[{\"page\":\"home/visit\",\"count\":3},{\"page\":\"session/login\",\"count\":3}]"
+    end
+  end
+
+  describe ".analysis_per_user_by_page_views" do
+    it "returns counts by each page for all audited users in the system" do
+      john = "John Smith"
+      fake = "Fake User"
+      audit = 3.times{
+        AuditRails::Audit.create!(:action => action = "visit", :user_name => john, :controller => 'home')
+        AuditRails::Audit.create!(:action => action = "visit", :user_name => john, :controller => 'session')
+        AuditRails::Audit.create!(:action => action = "login", :user_name => fake, :controller => 'session')
+      }
+
+      AuditRails::Audit.analysis_per_user_by_page_views.should == "{\"Fake User\":[{\"page\":\"session/login\",\"count\":3}],"+
+                                                                  "\"John Smith\":[{\"page\":\"home/visit\",\"count\":3},"+
+                                                                                  "{\"page\":\"session/visit\",\"count\":3}]}"
+    end
+  end
+
+  describe ".unique_visitor_count" do
+    it "returns unique visitor count in the system by ip address" do
+      john = "John Smith"
+      fake = "Fake User"
+      audit = 3.times{
+        AuditRails::Audit.create!(:action => action = "visit", :user_name => john, :controller => 'home', :ip_address =>'127.0.0.1')
+        AuditRails::Audit.create!(:action => action = "visit", :user_name => john, :controller => 'session', :ip_address =>'127.0.0.2')
+        AuditRails::Audit.create!(:action => action = "login", :user_name => fake, :controller => 'session', :ip_address =>'127.0.0.3')
+      }
+
+      AuditRails::Audit.unique_visitor_count.should == 3
+    end
+  end
+
+  describe ".visitor_count" do
+    it "returns total visitor count in the system" do
+      john = "John Smith"
+      fake = "Fake User"
+      audit = 3.times{
+        AuditRails::Audit.create!(:action => action = "visit", :user_name => john, :controller => 'home', :ip_address =>'127.0.0.1')
+        AuditRails::Audit.create!(:action => action = "visit", :user_name => john, :controller => 'session', :ip_address =>'127.0.0.2')
+        AuditRails::Audit.create!(:action => action = "login", :user_name => fake, :controller => 'session', :ip_address =>'127.0.0.3')
+      }
+
+      AuditRails::Audit.visitor_count.should == 9
     end
   end
 
