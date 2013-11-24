@@ -91,3 +91,35 @@ a.active-item span.badge{
   padding-top: 50px;
   width: 680px;
 }
+
+
+.slice{
+    font-size: 10px;
+}
+
+/* Begin hand crafted tooltip */
+div.tooltip {
+    position: absolute;
+    text-align: center;
+    line-height: 1;
+    font-weight: bold;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 2px;
+    pointer-events: none;
+}
+div.tooltip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+  top: 100%;
+  left: 0%;
+}
+/* End hand crafted tooltip */

@@ -20,6 +20,7 @@
 //= require audit_rails/user-counts
 //= require audit_rails/page-views
 //= require audit_rails/page-views-for-user
+//= require audit_rails/page-view-user-contribution
 //= require audit_rails/audit
 //= require audit_rails/bootstrap
 //= require_tree .
