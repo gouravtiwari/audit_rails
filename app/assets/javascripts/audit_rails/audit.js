@@ -15,9 +15,11 @@ $(document).ready(function(){
   }
 
   $('a[data-user]').on('click', function(){
+    var user = $(this).attr('data-user');
     d3.select("div#pageViewsByUser>svg").remove();
     $('a.list-group-item').removeClass('active-item');
     $(this).addClass('active-item');
+    $('#userNameToShow').text('Pages viewed by '+user);
     pageViewsForUser($(this).attr('data-user'));
   });
 });
