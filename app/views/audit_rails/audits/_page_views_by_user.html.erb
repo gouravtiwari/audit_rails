@@ -1,14 +1,15 @@
 <div class='clear'></div>
 <div class='left page-views'>
+  <a name='page-views-by-user'></a>
   <ul class="nav nav-pills">
     <li class="active">
-      <a href="#page-views-by-user" name='page-views-by-user'>Pages viewed by individual users</span></a>
+      <a href="#page-views-by-user">Pages viewed by individual users</span></a>
     </li>
   </ul>
   <br/>
   <div class="list-group page-views">
     <% JSON.parse(@analysis_by_user_name).each do |user_hsh| %>
-      <a href="#page-views-by-user" class="list-group-item" data-user='<%=user_hsh["user"]%>' data-page-visits='<%= page_visits_by_user(user_hsh['user'])%>'><%= user_hsh["user"] %> - 20%
+      <a href="#page-views-by-user" class="list-group-item" data-user='<%=user_hsh["user"]%>' data-page-visits='<%= page_visits_by_user(user_hsh['user'])%>'><%= user_hsh["user"] %> - <%= percentage_share(user_hsh["user"], user_hsh["count"], @total)%>
         <span class="badge"><%= user_hsh["count"] %></span>
       </a>
     <% end %>
@@ -19,3 +20,4 @@
   <div id="userNameToShow"></div>
   <div id='pageViewsByUser'></div>
 </div>
+<div id="tooltip"></div>

@@ -29,5 +29,9 @@ module AuditRails
     def page_visits_by_user(user)
       JSON.parse(@analysis_per_user_by_page_views)[user].to_json
     end
+
+    def percentage_share(user, count, total)
+      "#{(100.0 * count/total).round(1)}%"
+    end
   end
 end
