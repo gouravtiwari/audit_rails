@@ -1,6 +1,9 @@
 .left {
   float: left;
 }
+.hide{
+  display: none;
+}
 .audit-row{
   width: 60%;
   border-radius: 15px;
@@ -78,7 +81,7 @@ a.active-item span.badge{
 }
 
 #userNameToShow{
-  padding-top: 70px;
+  padding-top: 10px;
   width: 680px;
   text-align: center;
   font-weight: bold;
@@ -88,7 +91,7 @@ a.active-item span.badge{
 
 #pageViewsByUser{
   padding-left: 45px;
-  padding-top: 50px;
+  padding-top: 10px;
   width: 680px;
 }
 

@@ -27,4 +27,24 @@ $(document).ready(function(){
     pageViewsForUser(user);
     pageViewsShareByUser(user);
   });
+
+  // Hiding all elements except first chart
+  $('.group').hide();
+  $('#user-clicks').show();
+
+  // Transition effect
+  $('li>a').on('click', function(){
+    var id = $(this).attr('data-attr-id');
+    active(this, id);
+    $('.group').hide('fast');
+    $('#'+id).show('slow');
+  });
 });
+
+function active(obj, id){
+  var parent = $(obj).parent()
+  $(obj).parent().parent().children('li').removeClass('active');
+  $(obj).parent().addClass('active');
+  $('ul.nav.nav-tabs>li>a>span').addClass('hide');
+  $('a[data-attr-id="'+id+'"]>span.badge').removeClass('hide');
+}
