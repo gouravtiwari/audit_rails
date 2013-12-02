@@ -1,3 +1,6 @@
+== 2.0.1
+* UI Changes
+
 == 2.0.0
 * Added visitor count (.visitor_count and unique_visitor_count)
 * Added unique visitor count
