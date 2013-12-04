@@ -4,15 +4,6 @@ module AuditRails
   class AuditsController < ApplicationController
     before_filter :apply_filter, except: [:create]
 
-    def index
-      find_all_audits
-
-      if params[:commit] == "Download Filtered Report"
-        send_data(@audits.to_xls(:columns => [:user_name, :action, :description, :created_at], 
-                  :headers => ['User name', 'Action', 'Details', 'When?']), filename: 'audits.xls') and return
-      end
-    end
-
     def create
       add_to_audit("visit-site", "xyz", "Fake User")
       render :nothing => true, :status => 200, :content_type => 'text/html'

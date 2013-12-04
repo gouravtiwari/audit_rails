@@ -1,9 +1,0 @@
-<div class="page-header">
-  <h1>Audits</h1>
-</div>
-<%= render partial: 'form', locals: {path: audit_rails.audits_path} %>
-<br>
-<%= link_to("Create Test Audits", "http://www.google.com", :class => "visit-site") if Rails.env == 'development' %>
-<br><br>
-<%= render(partial: 'no_audits_available', locals: {no_audits: @no_audits}) if @audits.size == 0 %>
-<%= render(partial: 'list', locals: {audits: @audits}) %>

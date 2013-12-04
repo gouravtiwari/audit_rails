@@ -64,10 +64,6 @@ Override current_user method in application controller, e.g.:
       super
     end
 
-#### To see all audits
-
-    Go to <app-url>/audit_rails/audits
-
 #### To see Analytics
 
     Go to <app-url>/audit_rails/audits/analytics
