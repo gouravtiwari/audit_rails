@@ -1,12 +1,11 @@
 function pageViewsShareByUser(userName){
-    var margin = {top: 40, right: right, bottom: 100, left: 40},
+    var margin = {top: 40, right: 40, bottom: 100, left: 40},
         width = 650 - margin.left - margin.right,
         height = 360 - margin.top - margin.bottom;
         radius = 100,                            //radius
     color = d3.scale.category20c();     //builtin range of colors
  
     var data  = JSON.parse( $('a[data-user="'+ userName +'"]').attr('data-page-visits'));;
-    
     var vis = d3.select("div#pageViewsShareByUser")
         .append("svg:svg")              //create the SVG element inside the <body>
         .data([data])                   //associate our data with the document
@@ -30,7 +29,7 @@ function pageViewsShareByUser(userName){
         .enter()                            //this will create <g> elements for every "extra" data element that should be associated with a selection. The result is creating a <g> for every object in the data array
             .append("svg:g")                //create a group to hold each slice (we will have a <path> and a <text> element associated with each slice)
                 .attr("class", "slice")    //allow us to style things in the slices (like text)
-                .on('mouseover', function (d, i) {
+                .on('mousemove', function (d, i) {
                     div.transition()
                     .duration(200)
                     .style("opacity", 0.9);
