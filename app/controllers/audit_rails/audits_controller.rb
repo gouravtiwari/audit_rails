@@ -13,6 +13,7 @@ module AuditRails
       @analysis_by_user_name  = AuditRails::Audit.in_range(@range_begin, @range_end).analysis_by_user_name
       @analysis_by_page_views = AuditRails::Audit.in_range(@range_begin, @range_end).analysis_by_page_views
       @analysis_per_user_by_page_views  = AuditRails::Audit.in_range(@range_begin, @range_end).analysis_per_user_by_page_views
+      @analysis_by_hourly_views  = AuditRails::Audit.in_range(@range_begin, @range_end).analysis_by_hourly_views
 
       @total = AuditRails::Audit.in_range(@range_begin, @range_end).count
       @no_audits = AuditRails::Audit.count == 0

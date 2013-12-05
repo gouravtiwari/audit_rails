@@ -79,6 +79,20 @@ describe AuditRails::Audit do
     end
   end
 
+  describe ".analysis_by_hourly_views" do
+    it "returns counts by hourly views for all audited users in the system" do
+      john = "John Smith"
+      fake = "Fake User"
+      audit = 3.times{
+        AuditRails::Audit.create!(:action => action = "visit", :user_name => john, :controller => 'home')
+        AuditRails::Audit.create!(:action => action = "visit", :user_name => john, :controller => 'session')
+        AuditRails::Audit.create!(:action => action = "login", :user_name => fake, :controller => 'session')
+      }
+
+      AuditRails::Audit.analysis_by_hourly_views.should =~ /\"hour\":\"#{Time.now.strftime('%H')}:00\",\"count\":9/
+    end
+  end
+
   describe ".unique_visitor_count" do
     it "returns unique visitor count in the system by ip address" do
       john = "John Smith"

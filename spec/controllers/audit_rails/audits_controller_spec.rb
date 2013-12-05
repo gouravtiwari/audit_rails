@@ -34,7 +34,8 @@ describe AuditRails::AuditsController do
                                                                               {"page"=>"login", "count"=>2}], 
                                                                 "John Smith" => [{"page"=>"visit-site", "count"=>2},
                                                                               {"page"=>"login", "count"=>1}]
-                                                              }
+                                                              },
+        analysis_by_hourly_views: hourly_list = {"01"=>6, "23"=>3},
         ))
 
       get 'analytics'
@@ -43,6 +44,7 @@ describe AuditRails::AuditsController do
       expect(assigns(:analysis_by_user_name)).to eq(user_list)
       expect(assigns(:analysis_by_page_views)).to eq(page_list)
       expect(assigns(:analysis_per_user_by_page_views)).to eq(users_by_page_list)
+      expect(assigns(:analysis_by_hourly_views)).to eq(hourly_list)
     end
   end
 end

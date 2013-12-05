@@ -1,5 +1,7 @@
 module AuditRails
   class Audit < ActiveRecord::Base
+    extend AuditRails::DBExtension
+
     def self.needs_attr_accessible?
       Rails::VERSION::MAJOR == 3
     end
@@ -20,6 +22,7 @@ module AuditRails
     scope :group_by_controller_action, ->{group([:controller, :action])}
     scope :group_by_user_name, ->{group('user_name')}
     scope :group_by_ip_address, ->{group('ip_address')}
+    scope :group_by_hours, ->{group(hourly('created_at'))}
 
     def self.no_audit_entry_for_today?(action_name, user_name)
       audits = where(action: action_name, user_name: user_name, 
@@ -51,6 +54,17 @@ module AuditRails
 
     def self.visitor_count
       group_by_ip_address.count.values.sum
+    end
+
+    def self.analysis_by_hourly_views
+      hourly_counts = Hash[group_by_hours.count.map{|k,v| [k.to_i, v]}]
+      hourly_series = Array.new(24, 0)
+
+      hourly_series.each.with_index do |a, i|
+        hourly_series[i] = hourly_counts[i] if hourly_counts[i]
+      end
+
+      hourly_series.map.with_index{|v,i| {'hour' => i.to_s.rjust(2,'0')+":00", 'count' => v}}.to_json
     end
   end
 end
