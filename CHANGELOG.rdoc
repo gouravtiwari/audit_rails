@@ -1,3 +1,8 @@
+== 2.0.2
+* Added Hourly user clicks chart
+* Fixed minor issue with pie chart tool tip
+* Removed Audit Rails listing of events
+
 == 2.0.1
 * UI Changes
 
