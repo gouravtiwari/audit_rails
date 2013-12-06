@@ -19,6 +19,7 @@ $(document).ready(function(){
   $('a[data-user]').on('click', function(){
     var user = $(this).attr('data-user');
     d3.select("div#pageViewsByUser>svg").remove();
+    d3.select('svg.legend').remove();
     d3.select("div#pageViewsShareByUser>svg").remove();
     $('a.list-group-item').removeClass('active-item');
     $(this).addClass('active-item');

@@ -1,6 +1,6 @@
 <div id='per-user-by-pages-pie' class='group'>
   <div class='clear'></div>
-  <div class='left page-views'>
+  <div class='left page-views left-navigation'>
     <div class="list-group page-views">
       <% JSON.parse(@analysis_by_user_name).each do |user_hsh| %>
         <a href="#page-views-by-user" class="list-group-item" data-user='<%=user_hsh["user"]%>' data-page-visits='<%= page_visits_by_user(user_hsh['user'])%>'><%= user_hsh["user"] %> - <%= percentage_share(user_hsh["user"], user_hsh["count"], @total)%>

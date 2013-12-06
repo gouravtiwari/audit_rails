@@ -70,6 +70,9 @@
 .page-views{
   width: 245px;
 }
+.left-navigation{
+ min-height: 650px; 
+}
 
 a.active-item, a.active-item:hover{
   background-color: skyblue;
