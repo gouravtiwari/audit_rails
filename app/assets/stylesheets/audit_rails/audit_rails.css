@@ -1,75 +1,24 @@
 .left {
   float: left;
 }
+
 .hide{
   display: none;
 }
+
 .audit-row{
   width: 60%;
   border-radius: 15px;
 }
+
 .clear{
   clear: both;
-}
-.axis path,
-.axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
-}
-
-.bar {
-  fill: orange;
-}
-
-.bar:hover {
-  fill: orangered ;
-}
-
-.line {
-  fill: white;
-  border-color: orange;
-}
-.line:hover {
-  border-color: orangered;
-}
-
-.x.axis path {
-  /*display: none;*/
-}
-
-.d3-tip {
-  line-height: 1;
-  font-weight: bold;
-  padding: 12px;
-  background: rgba(0, 0, 0, 0.8);
-  color: #fff;
-  border-radius: 2px;
-}
-
-/* Creates a small triangle extender for the tooltip */
-.d3-tip:after {
-  box-sizing: border-box;
-  display: inline;
-  font-size: 10px;
-  width: 100%;
-  line-height: 1;
-  color: rgba(0, 0, 0, 0.8);
-  content: "\25BC";
-  position: absolute;
-  text-align: center;
-}
-
-/* Style northward tooltips differently */
-.d3-tip.n:after {
-  margin: -1px 0 0 0;
-  top: 100%;
-  left: 0;
 }
 
 .page-views{
   width: 245px;
 }
+
 .left-navigation{
  min-height: 650px; 
 }
@@ -78,6 +27,7 @@ a.active-item, a.active-item:hover{
   background-color: skyblue;
   color: white;
 }
+
 a.active-item span.badge{
   background-color: white;
   color: #428bca;
@@ -91,41 +41,12 @@ a.active-item span.badge{
   font-style: italic;
 }
 
-
 #pageViewsByUser{
   padding-left: 45px;
   padding-top: 10px;
   width: 680px;
 }
 
-
 .slice{
     font-size: 10px;
 }
-
-/* Begin hand crafted tooltip */
-div.tooltip {
-    position: absolute;
-    text-align: center;
-    line-height: 1;
-    font-weight: bold;
-    padding: 12px;
-    background: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    border-radius: 2px;
-    pointer-events: none;
-}
-div.tooltip:after {
-  box-sizing: border-box;
-  display: inline;
-  font-size: 10px;
-  width: 100%;
-  line-height: 1;
-  color: rgba(0, 0, 0, 0.8);
-  content: "\25BC";
-  position: absolute;
-  text-align: center;
-  top: 100%;
-  left: 0%;
-}
-/* End hand crafted tooltip */

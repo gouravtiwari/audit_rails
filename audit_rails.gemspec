@@ -1,9 +1,6 @@
 $:.push File.expand_path("../lib", __FILE__)
-
-# Maintain your gem's version:
 require "audit_rails/version"
 
-# Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
   s.name        = "audit_rails"
   s.version     = AuditRails::VERSION
@@ -18,6 +15,7 @@ Gem::Specification.new do |s|
   s.test_files = Dir["spec/**/*"]
 
   s.add_dependency "rails", "> 3.2.6", "< 5"
+  s.add_runtime_dependency 'sleek_charts'
   s.add_runtime_dependency "to_xls", "~>1.5.1"
   s.add_runtime_dependency "jquery-rails"
 
@@ -30,7 +28,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency "guard-bundler"
   s.add_development_dependency "rb-fsevent"
   s.add_development_dependency "shoulda-matchers"
-  # s.add_development_dependency "coveralls"
   s.add_development_dependency "simplecov"
   s.add_development_dependency 'coveralls'
 end

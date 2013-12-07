@@ -12,10 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require sleek_charts
 //= require audit_rails/jquery-ui
 //= require audit_rails/date-picker
-//= require audit_rails/d3/d3.v3
-//= require audit_rails/d3/d3.tip
 //= require audit_rails/user-counts
 //= require audit_rails/page-views
 //= require audit_rails/page-views-for-user
