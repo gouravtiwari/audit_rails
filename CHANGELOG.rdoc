@@ -1,3 +1,6 @@
+== 2.04
+* Huge refactoring and cleanup
+
 == 2.0.3
 * Updated Pie Chart
 
