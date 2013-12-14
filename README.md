@@ -89,3 +89,7 @@ Please fork it, add specs and send a pull request!
 
 ### License
 This project rocks and uses MIT-LICENSE.
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/gouravtiwari/audit_rails/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
