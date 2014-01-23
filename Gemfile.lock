@@ -4,7 +4,7 @@ PATH
     audit_rails (2.0.4)
       jquery-rails
       rails (> 3.2.6, < 5)
-      sleek_charts
+      sleek_charts (~> 0.0.2)
       to_xls (~> 1.5.1)
 
 GEM
@@ -145,7 +145,7 @@ GEM
       multi_json (~> 1.0)
       simplecov-html (~> 0.7.1)
     simplecov-html (0.7.1)
-    sleek_charts (0.0.1)
+    sleek_charts (0.0.2)
     slop (3.4.6)
     spork (1.0.0rc4)
     spreadsheet (0.9.6)

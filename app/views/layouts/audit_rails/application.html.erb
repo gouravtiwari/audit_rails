@@ -1,28 +1,37 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>AuditRails</title>
-  <%= stylesheet_link_tag    "audit_rails/application", :media => "all" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-          <li>
-            <%= link_to 'Home', '/' %>
-          </li>
-          <li class="<%= active_class('analytics')%>">
-            <%= link_to 'Analytics', analytics_audits_path %>
-          </li>
-        </ul>
-      </div><!--/.nav-collapse -->
+  <head>
+    <title>AuditRails</title>
+    <%= stylesheet_link_tag    "audit_rails/application", :media => "all" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class="navbar navbar-default navbar-fixed-top header-container" role="navigation">
+      <div class='container'>
+        <div class="navbar-header">
+          <a class="brand" href="/"> <%= image_tag 'logo.png'%></a>
+        </div>
+        <div class="navbar-collapse collapse navbar-bottom">
+          <ul class="nav navbar-nav">
+            <li>
+              <%= link_to 'Home', '/' %>
+            </li>
+            <li class="<%= active_class('analytics')%>">
+              <%= link_to 'Analytics', analytics_audits_path %>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+        <a href="https://github.com/gouravtiwari/audit_rails/fork"><img style="position: fixed; top: 0; right: 0; border: 0; z-index: 10000;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+      </div>
     </div>
-  </div>
-  <div class='container theme-showcase'>
-    <%= yield %>
-  </div>
-  <%= javascript_include_tag "audit_rails/application" %> 
-</body>
+    <div class='container theme-showcase'>
+      <%= yield %>
+    </div>
+    <div class='footer-container'>
+      <div class='footer container'>
+        Copyright 2014 © Audit Rails
+      </div>
+    </div>
+    <%= javascript_include_tag "audit_rails/application" %> 
+  </body>
 </html>

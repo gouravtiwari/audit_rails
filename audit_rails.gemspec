@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.test_files = Dir["spec/**/*"]
 
   s.add_dependency "rails", "> 3.2.6", "< 5"
-  s.add_runtime_dependency 'sleek_charts'
+  s.add_runtime_dependency 'sleek_charts', "~>0.0.2"
   s.add_runtime_dependency "to_xls", "~>1.5.1"
   s.add_runtime_dependency "jquery-rails"
 

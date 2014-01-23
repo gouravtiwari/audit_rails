@@ -1,7 +1,13 @@
+<div class='col-sm-1' style='padding-right:0;padding-top:7px;'>
+  Date Range
+</div>
 <div class='col-sm-2'>
   <div class="input-group">
     <%= text_field_tag('analytics[range_begin]', @range_begin, placeholder: 'Begin', class: 'form-control')%>
   </div>
+</div>
+<div class='col-sm-1' style='padding: 7px 0;width:15px;'>
+  to
 </div>
 <div class='col-sm-2'>
   <div class="input-group">
@@ -10,11 +16,11 @@
 </div>
 <div class='col-sm-1'>
   <div class="input-group">
-    <%= submit_tag('Filter', class: 'btn btn-primary btn-sm')%>
+    <%= submit_tag('FILTER', class: 'btn btn-primary btn-sm filter')%>
   </div>
 </div>
 <div class='col-sm-2'>
   <div class="input-group">
-    <%= submit_tag('Download Filtered Report',  class: 'btn btn-primary btn-sm')  %>
+    <%= submit_tag('DOWNLOAD REPORT',  class: 'btn btn-primary btn-sm download-report')  %>
   </div>
 </div>

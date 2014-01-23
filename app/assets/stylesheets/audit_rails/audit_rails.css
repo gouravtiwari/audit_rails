@@ -1,3 +1,84 @@
+.header-container,.footer-container{
+  background-color: #33aeb8;
+  border: none;
+  right: 0;
+  left: 0;
+}
+.navbar-bottom{
+  padding-top: 62px;
+}
+.justified-row{
+  text-align: center;
+}
+.justified-row-container{
+  text-align: center;
+  position: relative; 
+}
+.footer-container{
+  bottom: 0;
+  left:0;
+  position:fixed;
+}
+.footer{
+  font-size: 10px;
+  padding: 20px;
+  color: #ffffff;
+  bottom:0;
+}
+#totalCount, #uniqueCount{
+  height: 230px;
+  width: 230px;
+  float: left;
+}
+#totalVisitors, #uniqueVisitors{
+  padding-top: 80px;
+  font: 72px HelveticaNeueLTStdUltLtCn;
+}
+.visitor-label{
+  font: 24px HelveticaNeueLTStdUltLtCn;
+  padding-top: 10px;
+}
+#visitorCount{
+  position: absolute;
+  top: 0px;
+  left: 330px;
+}
+.content{
+  margin-top: 120px;
+}
+.left{
+  float: left;
+}
+.motto{
+  font-family: HelveticaNeueLTStdLtCn;
+  font-size: 24px;
+}
+.homepage-heading{
+  font-family: HelveticaNeueLTStdLtCn;
+  font-weight: bold;
+  font-size: 24px; 
+}
+ul.homepage-content li,
+ol.homepage-content li,
+.homepage-content{
+  font-family: HelveticaNeueLTStdLtCn;
+  font-size: 18px; 
+}
+ul.error-explanation{
+  margin:0;
+  padding:0
+}
+ul.error-explanation li{
+  color: red;
+  list-style-type: none;;
+}
+.field_with_errors input{
+  border-color: #F778A1;
+}
+.notice{
+  color: green;
+}
+
 .left {
   float: left;
 }
@@ -49,4 +130,26 @@ a.active-item span.badge{
 
 .slice{
     font-size: 10px;
+}
+
+input.filter{
+  background-color: #006978;
+  border-radius: 0;
+}
+
+input.filter:hover{
+  background-color: #2C8D94;
+  border-radius: 0;
+}
+
+input.download-report{
+  background-color: #e98e4e;
+  border-color: #e98e4e;
+  border-radius: 0;
+}
+
+input.download-report:hover{
+  background-color: #EB9A61;
+  border-color: #e98e4e;
+  border-radius: 0;
 }
