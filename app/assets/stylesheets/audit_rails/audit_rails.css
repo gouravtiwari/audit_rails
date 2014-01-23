@@ -7,13 +7,6 @@
 .navbar-bottom{
   padding-top: 62px;
 }
-.justified-row{
-  text-align: center;
-}
-.justified-row-container{
-  text-align: center;
-  position: relative; 
-}
 .footer-container{
   bottom: 0;
   left:0;
@@ -24,24 +17,6 @@
   padding: 20px;
   color: #ffffff;
   bottom:0;
-}
-#totalCount, #uniqueCount{
-  height: 230px;
-  width: 230px;
-  float: left;
-}
-#totalVisitors, #uniqueVisitors{
-  padding-top: 80px;
-  font: 72px HelveticaNeueLTStdUltLtCn;
-}
-.visitor-label{
-  font: 24px HelveticaNeueLTStdUltLtCn;
-  padding-top: 10px;
-}
-#visitorCount{
-  position: absolute;
-  top: 0px;
-  left: 330px;
 }
 .content{
   margin-top: 120px;
