@@ -1,3 +1,6 @@
+== 2.05
+* New look!
+
 == 2.04
 * Huge refactoring and cleanup
 

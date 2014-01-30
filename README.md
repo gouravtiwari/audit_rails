@@ -1,5 +1,5 @@
 ## AuditRails
-[![Gem Version](https://badge.fury.io/rb/audit_rails.png)](http://badge.fury.io/rb/audit_rails)[![Build Status](https://travis-ci.org/gouravtiwari/audit_rails.png?branch=master)](https://travis-ci.org/gouravtiwari/audit_rails)[![Coverage Status](https://coveralls.io/repos/gouravtiwari/audit_rails/badge.png?branch=master)](https://coveralls.io/r/gouravtiwari/audit_rails?branch=master)
+[![Gem Version](https://badge.fury.io/rb/audit_rails.png)](http://badge.fury.io/rb/audit_rails)[![Build Status](https://travis-ci.org/gouravtiwari/audit_rails.png?branch=master)](https://travis-ci.org/gouravtiwari/audit_rails)[![Coverage Status](https://coveralls.io/repos/gouravtiwari/audit_rails/badge.png?branch=master)](https://coveralls.io/r/gouravtiwari/audit_rails?branch=master)[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/gouravtiwari/audit_rails/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 An action based auditor, which has internal as well as outgoing link tracking.
 
@@ -77,6 +77,10 @@ Use below link in views:
 
     link_to audit_rails.audits_path(:format => "xls")
 
+### To Do
+  - geoip integration
+  - World Map Integration
+
 ### Changelog
 
     https://github.com/gouravtiwari/audit_rails/blob/master/CHANGELOG.rdoc
@@ -89,7 +93,3 @@ Please fork it, add specs and send a pull request!
 
 ### License
 This project rocks and uses MIT-LICENSE.
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/gouravtiwari/audit_rails/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
