@@ -1,8 +1,9 @@
 $(function() {
+    $('#ui-datepicker-div').addClass('theme1');
     $( "#analytics_range_begin" ).datepicker({
-      defaultDate: "+1w",
       changeMonth: true,
-      numberOfMonths: 3,
+      changeYear: true,
+      numberOfMonths: 1,
       onClose: function( selectedDate ) {
         $( "#analytics_range_end" ).datepicker( "option", "minDate", selectedDate );
       },
@@ -11,7 +12,8 @@ $(function() {
     $( "#analytics_range_end" ).datepicker({
       defaultDate: "+1w",
       changeMonth: true,
-      numberOfMonths: 3,
+      changeYear: true,
+      numberOfMonths: 1,
       onClose: function( selectedDate ) {
         $( "#analytics_range_begin" ).datepicker( "option", "maxDate", selectedDate );
       },

@@ -1,3 +1,13 @@
 div.ui-datepicker{
  font-size:10px;
 }
+.ui-widget-header {
+  border: 1px solid #aaaaaa;
+  background: #cccccc url(images/ui-bg_highlight-soft_75_cccccc_1x100.png) 50% 50% repeat-x;
+  color: #222222;
+  font-weight: bold;
+}
+.ui-widget-content {
+  color: #33aeb8;
+  background: #f2f2f2;
+}
