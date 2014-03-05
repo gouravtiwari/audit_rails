@@ -1,18 +1,30 @@
-<div class="page-header">
-  <h1>Analytics</h1>
-</div>
+<div class='container'>
+  <div class="page-header">
+    <h1>Analytics</h1>
+  </div>
 
-<%= render partial: 'form', locals: {path: audit_rails.analytics_audits_path} %>
+  <%= render partial: 'form', locals: {path: audit_rails.analytics_audits_path} %>
+</div>
 <br/>
+<div class="navbar" style="height:120px;background: #E2E2E2;">
+  <div class='container'>
+    <br/>
+    <br/>
+    <div id="noroll"></div>
+  </div>
+</div>
 <br/>
-<% if @analysis_by_user_name == {} %>
-  <%= render partial: 'no_audits_available', locals: {no_audits: @no_audits} %>
-<% else %>
-  <%= render partial: 'sub_menu' %>
-  <br/>
-  <%= render partial: 'user_clicks' %>
-  <%= render partial: 'page_views' %>
-  <%= render partial: 'hourly_views' %>
-  <%= render partial: 'page_views_by_user_bar' %>
-  <%= render partial: 'page_views_by_user_pie' %>
-<% end %>
+
+<div class='container theme-showcase'>
+  <% if @analysis_by_user_name == {} %>
+    <%= render partial: 'no_audits_available', locals: {no_audits: @no_audits} %>
+  <% else %>
+    <%= render partial: 'sub_menu' %>
+    <br/>
+    <%= render partial: 'user_clicks' %>
+    <%= render partial: 'page_views' %>
+    <%= render partial: 'hourly_views' %>
+    <%= render partial: 'page_views_by_user_bar' %>
+    <%= render partial: 'page_views_by_user_pie' %>
+  <% end %>
+</div>

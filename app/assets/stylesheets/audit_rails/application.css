@@ -14,5 +14,6 @@
  *= require audit_rails/twitter/bootstrap
  *= require audit_rails/bootstrap_override
  *= require audit_rails/audit_rails
+ *= require audit_rails/range-selector
  *= require_self
  */

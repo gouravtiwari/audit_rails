@@ -1,5 +1,6 @@
 div.ui-datepicker{
  font-size:10px;
+ z-index: 9999 !important;
 }
 .ui-widget-header {
   border: 1px solid #aaaaaa;

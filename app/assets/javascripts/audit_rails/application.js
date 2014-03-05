@@ -14,6 +14,9 @@
 //= require jquery_ujs
 //= require sleek_charts
 //= require audit_rails/jquery-ui
+//= require audit_rails/dygraph-combined
+//= require audit_rails/data
+//= require audit_rails/range-selector
 //= require audit_rails/date-picker
 //= require audit_rails/user-counts
 //= require audit_rails/page-views
