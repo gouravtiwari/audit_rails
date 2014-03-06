@@ -134,7 +134,7 @@ describe AuditRails::Audit do
         audit_3.update_attribute('created_at', 3.days.ago)
       }
 
-      AuditRails::Audit.count_by_day(3.days.ago, Date.today).should == {"Date" => "Count", 
+      AuditRails::Audit.count_by_day(3.days.ago, Date.today).should == {"Date" => "Page views", 
                                                                           3.days.ago.strftime('%Y%m%d') => 6,
                                                                           2.days.ago.strftime('%Y%m%d') => 3,
                                                                           1.days.ago.strftime('%Y%m%d') => 0,
