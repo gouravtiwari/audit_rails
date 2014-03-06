@@ -13,7 +13,7 @@ module AuditRails
     # Supports both string and date format of range given
     scope :in_range, ->(range_begin, range_end){
       if range_end.blank? || range_end.blank?
-        range_begin, range_end = '1970-01-01', Time.now
+        range_begin, range_end = 3.months.ago, Time.now
       end
       where(created_at: range_begin.to_date.beginning_of_day..range_end.to_date.end_of_day)
       }
@@ -68,7 +68,7 @@ module AuditRails
     end
 
     def self.count_by_day(start_date=1.year.ago, end_date=Time.now)
-      start_date  ||= 1.year.ago
+      start_date  ||= 3.months.ago
       end_date    ||= Time.now
       
       dates = start_date.to_date..end_date.to_date
@@ -76,7 +76,7 @@ module AuditRails
       records = records.group_by{|audit| audit.created_at.to_date.strftime('%Y%m%d')}
 
       overall_counts = Hash.new(0)
-      overall_counts['Date']='Count'
+      overall_counts['Date']='Page views'
 
       records.each do |date, audits|
         overall_counts[date] = audits.count
