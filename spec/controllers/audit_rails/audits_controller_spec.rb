@@ -37,6 +37,7 @@ describe AuditRails::AuditsController do
                                                               },
         analysis_by_hourly_views: hourly_list = {"01"=>6, "23"=>3},
         ))
+      AuditRails::Audit.stub(:count_by_day).and_return(stub("{\"Date\":\"Count\",\"20140303\":6,\"20140304\":3,\"20140305\":0,\"20140306\":0}"))
 
       get 'analytics'
 

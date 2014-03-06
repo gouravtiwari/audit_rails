@@ -16,6 +16,7 @@ module AuditRails
       @analysis_by_hourly_views  = AuditRails::Audit.in_range(@range_begin, @range_end).analysis_by_hourly_views
 
       @total = AuditRails::Audit.in_range(@range_begin, @range_end).count
+      @count_by_day = AuditRails::Audit.count_by_day(@range_begin, @range_end)
       @no_audits = AuditRails::Audit.count == 0
 
       if params[:commit] == "Download Filtered Report"

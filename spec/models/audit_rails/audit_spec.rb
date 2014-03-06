@@ -121,4 +121,25 @@ describe AuditRails::Audit do
     end
   end
 
+  describe ".count_by_day" do
+    it 'returns counts by day in a given range' do
+      john = "John Smith"
+      fake = "Fake User"
+      audits = 3.times{
+        audit_1 = AuditRails::Audit.create!(:action => action = "visit", :user_name => john, :controller => 'home', :ip_address =>'127.0.0.1')
+        audit_2 = AuditRails::Audit.create!(:action => action = "visit", :user_name => john, :controller => 'session', :ip_address =>'127.0.0.2')
+        audit_3 = AuditRails::Audit.create!(:action => action = "login", :user_name => fake, :controller => 'session', :ip_address =>'127.0.0.3')
+        audit_1.update_attribute('created_at', 2.days.ago)
+        audit_2.update_attribute('created_at', 3.days.ago)
+        audit_3.update_attribute('created_at', 3.days.ago)
+      }
+
+      AuditRails::Audit.count_by_day(3.days.ago, Date.today).should == {"Date" => "Count", 
+                                                                          3.days.ago.strftime('%Y%m%d') => 6,
+                                                                          2.days.ago.strftime('%Y%m%d') => 3,
+                                                                          1.days.ago.strftime('%Y%m%d') => 0,
+                                                                          Time.now.strftime('%Y%m%d')   => 0                                                                          
+                                                                        }.to_json
+    end
+  end
 end

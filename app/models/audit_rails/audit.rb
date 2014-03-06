@@ -66,5 +66,26 @@ module AuditRails
 
       hourly_series.map.with_index{|v,i| {'hour' => i.to_s.rjust(2,'0')+":00", 'count' => v}}.to_json
     end
+
+    def self.count_by_day(start_date, end_date)
+      dates = start_date.to_date..end_date.to_date
+      records = AuditRails::Audit.where(created_at: start_date.to_date.beginning_of_day..end_date.to_date.end_of_day).order('created_at')
+      records = records.group_by{|audit| audit.created_at.to_date.strftime('%Y%m%d')}
+
+      overall_counts = Hash.new(0)
+      overall_counts['Date']='Count'
+
+      records.each do |date, audits|
+        overall_counts[date] = audits.count
+      end
+
+      dates = dates.map{|d| d.strftime('%Y%m%d')}
+
+      dates.each do |date|
+        overall_counts[date] = "#{overall_counts[date]}".to_i
+      end
+
+      overall_counts.to_json
+    end
   end
 end
