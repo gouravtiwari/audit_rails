@@ -1,6 +1,6 @@
-/*.dygraph-axis-label.dygraph-axis-label-y{
-  display: none;
-}*/
 .dygraph-legend{
   background-color: #E2E2E2 !important;
+}
+.dygraph-title{
+  color: #006978;
 }

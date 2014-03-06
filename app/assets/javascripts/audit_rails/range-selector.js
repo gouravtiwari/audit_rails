@@ -1,11 +1,27 @@
+function data_temp(elementId) {
+  var counts = JSON.parse($('#'+elementId).attr('data-count'));
+  var str='';
+  var head = '';
+
+  for(var dateStr in counts){
+    if(dateStr == 'Date'){
+      head = dateStr + ',' + counts[dateStr] + '\n';
+    }else{
+      str = str + dateStr + ',' + counts[dateStr] + ';' + counts[dateStr] + ';' + counts[dateStr] + '\n';
+    }
+  }
+
+  return head + str;
+}
+
 g1 = new Dygraph(
     document.getElementById("noroll"),
-    data_temp,
+    data_temp("noroll"),
     {
       customBars: true,
       height: 320,
-      title: 'NY Temparature',
-      ylabel: 'Temperature (F)',
+      title: 'Page Views',
+      ylabel: '',
       // showLabelsOnHighlight: false,
       // drawYAxis: false,
       legend: 'always',
