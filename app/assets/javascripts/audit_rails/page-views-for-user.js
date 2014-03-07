@@ -4,9 +4,9 @@ function pageViewsForUser(userName){
     barTip({
             selector:   'div#pageViewsByUser',
             data:       data,
-            width:      960,
+            width:      380,
             height:     360,
-            margin:     {top: 40, right: 20, bottom: 100, left:40},
+            margin:     {top: 40, right: 40, bottom: 100, left:40},
             flexRight:  true,
             labelAngle: -60,
             xDomain:    'page',

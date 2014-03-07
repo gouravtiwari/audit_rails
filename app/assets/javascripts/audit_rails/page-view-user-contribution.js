@@ -3,18 +3,19 @@ function pageViewsShareByUser(userName) {
     donutTip({
         selector:       'div#pageViewsShareByUser',
         data:           data,
-        width:          500,
-        height:         500,
-        margin:         {top: 40, right: 40, bottom: 40, left:40},
+        width:          300,
+        height:         300,
+        margin:         {top: 20, right: 0, bottom: 20, left:40},
         flexRight:      true,
-        innerRadius:    90,
-        outerRadius:    180,
+        innerRadius:    60,
+        outerRadius:    110,
         color:          d3.scale.category20c(),
         xDomain:        'page',
         yDomain:        'count',
         tipLabel:       '',
         tipValue:       'count',
         tipText:        'Page Views',
-        totalLabel:     'Views'
+        totalLabel:     'Views',
+        legend:         false
     });
 }

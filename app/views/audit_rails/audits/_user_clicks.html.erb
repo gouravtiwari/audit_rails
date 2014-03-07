@@ -1,3 +1,16 @@
-<div id='user-clicks' class='left group'>
+<div id='user-clicks' class='overlay'>
+  <div data-attr-id="user-clicks" class="col-sm-12 overlay-section">
+    <div class="section-header">
+      <div class="section-text">
+        View by Users
+      </div>
+      <div class="section-count">
+        <%= @total %>
+      </div>
+      <button id="user-clicks-zoomout" type="button" class="btn btn-default btn-lg section-zoom">
+        <span class='glyphicon glyphicon-fullscreen large'></span>
+      </button>
+    </div>
+  </div>
   <div id='userViewsCount' data-visit-count='<%= @analysis_by_user_name %>'></div>
 </div>

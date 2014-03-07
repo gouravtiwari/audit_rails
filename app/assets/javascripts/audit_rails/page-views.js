@@ -5,7 +5,7 @@ barTip({
         data:       data,
         width:      960,
         height:     360,
-        margin:     {top: 40, right: 20, bottom: 100, left:40},
+        margin:     {top: 40, right: 20, bottom: 100, left:100},
         flexRight:  true,
         labelAngle: -60,
         xDomain:    'page',

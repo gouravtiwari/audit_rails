@@ -58,6 +58,10 @@ ul.error-explanation li{
   float: left;
 }
 
+.right {
+  float: right;
+}
+
 .hide{
   display: none;
 }
@@ -100,7 +104,63 @@ a.active-item span.badge{
 #pageViewsByUser{
   padding-left: 45px;
   padding-top: 10px;
-  width: 680px;
+  width: 380px;
+  float: left;
+}
+
+#pageViewsShareByUser{
+  width: 380px;
+  float: left;
+}
+
+.section-header{
+  height: 45px;
+}
+
+.section-text{
+  color: white;
+  background-color: #33aeb8;
+  padding: 15px;
+  height: 100%;
+  float: left;
+  min-width: 60%;
+}
+.section-text.disabled{
+  background-color: #E2E2E2;
+}
+
+.section-count{
+  float: left;
+  background-color: #006978;
+  color: white;
+  height: 45px;
+  padding: 10px;
+  font-size: 20px;
+  width: 20%;
+  text-align: center;
+}
+.section-count.disabled{
+  background-color: #C7C7C7;
+}
+.section-zoom{
+  width: 20%;
+}
+
+.section-body{
+  background: url('/assets/audit_rails/bar-chart-user.png') no-repeat center white;
+  min-height: 167px;
+}
+
+.section-body-user-pages{
+  background: url('/assets/audit_rails/user-pages.png') no-repeat center white;
+  min-height: 167px;
+  width: 100%;
+}
+
+.section-body-world{
+  background: url('/assets/audit_rails/world.png') no-repeat center white;
+  min-height: 167px;
+  width: 100%;
 }
 
 .slice{
@@ -127,4 +187,31 @@ input.download-report:hover{
   background-color: #EB9A61;
   border-color: #e98e4e;
   border-radius: 0;
+}
+
+.overlay{
+  width: 92%;
+  height: 470px;
+  top: 410px;
+  position: absolute;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.overlay-section{
+  margin: 0;
+  padding: 0;
+}
+#user-clicks{
+  display: none;
+}
+#page-views{
+  display: none;
+}
+#hourly-views{
+  display: none;
+}
+#user-pages{
+  display: none;
 }

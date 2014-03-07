@@ -1,4 +1,17 @@
-<div class='clear'></div>
-<div id='hourly-views' class='left group'>
+<div id='hourly-views' class='overlay'>
+  <div data-attr-id="hourly-views" class="col-sm-12 overlay-section">
+    <div class="section-header">
+      <div class="section-text">
+        Hourly Views (UTC)
+      </div>
+      <div class="section-count">
+        <%= @total %>
+      </div>
+      <button id="hourly-views-zoomout" type="button" class="btn btn-default btn-lg section-zoom">
+        <span class='glyphicon glyphicon-fullscreen large'></span>
+      </button>
+    </div>
+  </div>
+
   <div id='hourlyViewsCount' data-visit-count='<%= @analysis_by_hourly_views %>'></div>
 </div>

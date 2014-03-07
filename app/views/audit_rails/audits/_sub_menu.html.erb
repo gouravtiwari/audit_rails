@@ -1,7 +1,83 @@
-<ul class="nav nav-tabs">
-  <li class='active'><a href="#" data-attr-id='user-clicks'>All views by users <span class="badge"><%= @total %></span></a></li>
-  <li><a href="#" data-attr-id='page-views'>All views by pages <span class="badge hide"><%= @total %></span></a></li>
-  <li><a href="#" data-attr-id='hourly-views'>All views hourly (as per UTC) <span class="badge hide"><%= @total %></span></a></li>
-  <li><a href="#" data-attr-id='per-user-by-pages-bar'>Views per user by pages (bar) <span class="badge hide"><%= @total %></span></a></li>
-  <li><a href="#" data-attr-id='per-user-by-pages-pie'>Views per user by pages (pie) <span class="badge hide"><%= @total %></span></a></li>
-</ul>
+<div id="sections" class="container">
+  <div data-attr-id="user-clicks" class="col-sm-4">
+    <div class="section-header">
+      <div class="section-text">
+        View by Users
+      </div>
+      <div class="section-count">
+        <%= @total %>
+      </div>
+      <button id="user-clicks-zoomin" type="button" class="btn btn-default btn-lg section-zoom">
+        <span class='glyphicon glyphicon-fullscreen large'></span>
+      </button>
+    </div>
+    <div class="section-body">
+    </div>
+  </div>
+  <div data-attr-id="page-views" class="col-sm-4">
+    <div class="section-header">
+      <div class="section-text">
+        View by Pages
+      </div>
+      <div class="section-count">
+        <%= @total %>
+      </div>
+      <button id="page-views-zoomin" type="button" class="btn btn-default btn-lg section-zoom">
+        <span class='glyphicon glyphicon-fullscreen large'></span>
+      </button>
+    </div>
+    <div class="section-body">
+    </div>
+  </div>
+  <div data-attr-id="hourly-views" class="col-sm-4">
+    <div class="section-header">
+      <div class="section-text">
+        Hourly Views (UTC)
+      </div>
+      <div class="section-count">
+        <%= @total %>
+      </div>
+      <button id="hourly-views-zoomin" type="button" class="btn btn-default btn-lg section-zoom">
+        <span class='glyphicon glyphicon-fullscreen large'></span>
+      </button>
+    </div>
+    <div class="section-body">
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<div id="sections" class="container">
+  <div data-attr-id="user-pages" class="col-sm-8">
+    <div class="section-header">
+      <div class="section-text">
+        Users' Views by Pages
+      </div>
+      <div class="section-count">
+        <%= @total %>
+      </div>
+      <button id="user-pages-zoomin" type="button" class="btn btn-default btn-lg section-zoom">
+        <span class='glyphicon glyphicon-fullscreen large'></span>
+      </button>
+    </div>
+    <div class="section-body-user-pages">
+    </div>
+  </div>
+  <div id="world", data-attr-id="world" class="col-sm-4">
+    <div class="section-header">
+      <div class="section-text disabled">
+        Global Hits
+      </div>
+      <div class="section-count disabled">
+        <%= @total %>
+      </div>
+      <button id="world-zoom" type="button" class="btn btn-default btn-lg section-zoom">
+        <span class='glyphicon glyphicon-fullscreen large'></span>
+      </button>
+    </div>
+    <div class="section-body-world">
+    </div>
+  </div>
+</div>
+<br>
+<br>

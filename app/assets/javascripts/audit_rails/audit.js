@@ -29,9 +29,6 @@ $(document).ready(function(){
     pageViewsShareByUser(user);
   });
 
-  // Hiding all elements except first chart
-  $('.group').hide();
-  $('#user-clicks').show();
 
   // Transition effect
   $('li>a').on('click', function(){
@@ -39,6 +36,36 @@ $(document).ready(function(){
     active(this, id);
     $('.group').hide('fast');
     $('#'+id).show('slow');
+  });
+
+  $('#user-clicks-zoomin').on('click', function(){
+    $('#user-clicks').show();
+  });
+  $('#page-views-zoomin').on('click', function(){
+    $('#page-views').show();
+  });
+  $('#hourly-views-zoomin').on('click', function(){
+    $('#hourly-views').show();
+  });
+  $('#user-pages-zoomin').on('click', function(){
+    $('#user-pages').show();
+    $('per-user-by-pages-bar').show();
+    $('per-user-by-pages-pie').show();
+  });
+
+  $('#user-clicks-zoomout').on('click', function(){
+    $('#user-clicks').hide();
+  });
+  $('#page-views-zoomout').on('click', function(){
+    $('#page-views').hide();
+  });
+  $('#hourly-views-zoomout').on('click', function(){
+    $('#hourly-views').hide();
+  });
+  $('#user-pages-zoomout').on('click', function(){
+    $('#user-pages').hide();
+    $('per-user-by-pages-bar').hide();
+    $('per-user-by-pages-pie').hide();
   });
 });
 

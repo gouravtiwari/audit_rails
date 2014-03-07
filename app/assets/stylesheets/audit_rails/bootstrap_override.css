@@ -56,3 +56,7 @@ color: #f2f2f2;
 .theme-showcase > p > .btn {
   margin: 5px 0;
 }
+.btn-lg{
+  border-radius: 0px;
+  border-color: white;
+}
