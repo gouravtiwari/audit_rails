@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    audit_rails (2.0.6)
+    audit_rails (2.0.7)
       jquery-rails
       rails (> 3.2.6, < 5)
       sleek_charts (~> 0.0.3)
