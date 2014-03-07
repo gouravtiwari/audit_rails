@@ -1,3 +1,7 @@
+== 2.0.8
+* Color Pallette matching with theme
+* Some animation to show hide charts
+
 == 2.0.7
 * Bug fix related to image load with asset pipeline
 
