@@ -1,3 +1,6 @@
+== 2.0.9
+* refactoring to remove code duplication, thanks to @flyingmachine
+
 == 2.0.8
 * Color Pallette matching with theme
 * Some animation to show hide charts
