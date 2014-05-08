@@ -5,7 +5,7 @@
         View by Users
       </div>
       <div class="section-count">
-        <%= @total %>
+        <%= @analysis[:total] %>
       </div>
       <button id="user-clicks-zoomin" type="button" class="btn btn-default btn-lg section-zoom">
         <span class='glyphicon glyphicon-fullscreen large'></span>
@@ -20,7 +20,7 @@
         View by Pages
       </div>
       <div class="section-count">
-        <%= @total %>
+        <%= @analysis[:total] %>
       </div>
       <button id="page-views-zoomin" type="button" class="btn btn-default btn-lg section-zoom">
         <span class='glyphicon glyphicon-fullscreen large'></span>
@@ -35,7 +35,7 @@
         Hourly Views (UTC)
       </div>
       <div class="section-count">
-        <%= @total %>
+        <%= @analysis[:total] %>
       </div>
       <button id="hourly-views-zoomin" type="button" class="btn btn-default btn-lg section-zoom">
         <span class='glyphicon glyphicon-fullscreen large'></span>
@@ -54,7 +54,7 @@
         Users' Views by Pages
       </div>
       <div class="section-count">
-        <%= @total %>
+        <%= @analysis[:total] %>
       </div>
       <button id="user-pages-zoomin" type="button" class="btn btn-default btn-lg section-zoom">
         <span class='glyphicon glyphicon-fullscreen large'></span>
@@ -69,7 +69,7 @@
         Global Hits
       </div>
       <div class="section-count disabled">
-        <%= @total %>
+        <%= @analysis[:total] %>
       </div>
       <button id="world-zoom" type="button" class="btn btn-default btn-lg section-zoom">
         <span class='glyphicon glyphicon-fullscreen large'></span>

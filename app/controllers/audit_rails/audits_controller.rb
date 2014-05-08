@@ -10,16 +10,10 @@ module AuditRails
     end
 
     def analytics
-      @analysis_by_user_name  = AuditRails::Audit.in_range(@range_begin, @range_end).analysis_by_user_name
-      @analysis_by_page_views = AuditRails::Audit.in_range(@range_begin, @range_end).analysis_by_page_views
-      @analysis_per_user_by_page_views  = AuditRails::Audit.in_range(@range_begin, @range_end).analysis_per_user_by_page_views
-      @analysis_by_hourly_views  = AuditRails::Audit.in_range(@range_begin, @range_end).analysis_by_hourly_views
-
-      @total = AuditRails::Audit.in_range(@range_begin, @range_end).count
-      @count_by_day = AuditRails::Audit.count_by_day(@range_begin, @range_end)
+      @analysis = AuditRails::Audit.analysis(@range_begin, @range_end)
       @no_audits = AuditRails::Audit.count == 0
 
-      if params[:commit] == "Download Filtered Report"
+      if params[:commit] == "DOWNLOAD REPORT"
         find_all_audits
         send_data(@audits.to_xls(:columns => [:user_name, :action, :description, :created_at], 
                   :headers => ['User name', 'Action', 'Details', 'When?']), filename: 'audits.xls') and return

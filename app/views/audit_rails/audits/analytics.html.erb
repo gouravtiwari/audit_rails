@@ -10,13 +10,13 @@
   <div class='container'>
     <br/>
     <br/>
-    <div id="noroll" data-count="<%= @count_by_day%>"></div>
+    <div id="noroll" data-count="<%= @analysis[:count_by_day]%>"></div>
   </div>
 </div>
 <br/>
 
 <div class='container theme-showcase'>
-  <% if @analysis_by_user_name == {} %>
+  <% if @analysis[:by_user_name] == {} %>
     <%= render partial: 'no_audits_available', locals: {no_audits: @no_audits} %>
   <% else %>
     <%= render partial: 'sub_menu' %>

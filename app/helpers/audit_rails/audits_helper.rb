@@ -1,21 +1,19 @@
 module AuditRails
   module AuditsHelper
     def add_to_audit(action_name=nil, controller_name=nil, user_name=nil, description=nil)
-      if action_name == "login"
-        if AuditRails::Audit.no_audit_entry_for_today?(action_name, user_name)
-          AuditRails::Audit.create(action: action_name, 
+      if (action_name == "login" && 
+              AuditRails::Audit.no_audit_entry_for_today?(action_name, user_name)) || 
+        action_name != "login"
+          AuditRails::Audit.create(action: get_action(action_name), 
             controller: controller_name || request.params[:controller], 
             user_name: user_name, 
             description: description,
             ip_address: request.remote_ip.to_s)
-        end
-      else
-        AuditRails::Audit.create(action: action_name || request.params[:action],
-          controller: controller_name || request.params[:controller],
-          user_name: user_name, 
-          description: description,
-          ip_address: request.remote_ip.to_s)
       end
+    end
+
+    def get_action(action_name)
+      action_name || request.params[:action]
     end
 
     def active?(action_name)
@@ -27,7 +25,7 @@ module AuditRails
     end
 
     def page_visits_by_user(user)
-      JSON.parse(@analysis_per_user_by_page_views)[user].to_json
+      JSON.parse(@analysis[:per_user_by_page_views])[user].to_json
     end
 
     def percentage_share(user, count, total)

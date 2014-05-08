@@ -24,6 +24,18 @@ module AuditRails
     scope :group_by_ip_address, ->{group('ip_address')}
     scope :group_by_hours, ->{group(hourly('created_at'))}
 
+    def self.analysis(range_begin, range_end)
+      range_scope = in_range(range_begin, range_end)
+      {
+        :by_user_name      => range_scope.analysis_by_user_name,
+        :by_page_views     => range_scope.analysis_by_page_views,
+        :per_user_by_page_views => range_scope.analysis_per_user_by_page_views,
+        :by_hourly_views   => range_scope.analysis_by_hourly_views,
+        :total             => range_scope.count,
+        :count_by_day      => count_by_day(range_begin, range_end)
+      }
+    end
+
     def self.no_audit_entry_for_today?(action_name, user_name)
       audits = where(action: action_name, user_name: user_name, 
         created_at: Time.now.to_date.beginning_of_day..Time.now.to_date.end_of_day)
@@ -67,10 +79,10 @@ module AuditRails
       hourly_series.map.with_index{|v,i| {'hour' => i.to_s.rjust(2,'0')+":00", 'count' => v}}.to_json
     end
 
-    def self.count_by_day(start_date=1.year.ago, end_date=Time.now)
-      start_date  ||= 3.months.ago
-      end_date    ||= Time.now
-      
+    def self.count_by_day(start_date, end_date)
+      start_date  = start_date.blank? ? 3.months.ago : start_date
+      end_date    = end_date.blank? ? Time.now : end_date
+
       dates = start_date.to_date..end_date.to_date
       records = AuditRails::Audit.where(created_at: start_date.to_date.beginning_of_day..end_date.to_date.end_of_day).order('created_at')
       records = records.group_by{|audit| audit.created_at.to_date.strftime('%Y%m%d')}

@@ -37,15 +37,18 @@ describe AuditRails::AuditsController do
                                                               },
         analysis_by_hourly_views: hourly_list = {"01"=>6, "23"=>3},
         ))
-      AuditRails::Audit.stub(:count_by_day).and_return(stub("{\"Date\":\"Count\",\"20140303\":6,\"20140304\":3,\"20140305\":0,\"20140306\":0}"))
+      AuditRails::Audit.stub(:count_by_day).and_return(count_by_day = stub("{\"Date\":\"Count\",\"20140303\":6,\"20140304\":3,\"20140305\":0,\"20140306\":0}"))
 
       get 'analytics'
 
-      expect(assigns(:total)).to eq(count)
-      expect(assigns(:analysis_by_user_name)).to eq(user_list)
-      expect(assigns(:analysis_by_page_views)).to eq(page_list)
-      expect(assigns(:analysis_per_user_by_page_views)).to eq(users_by_page_list)
-      expect(assigns(:analysis_by_hourly_views)).to eq(hourly_list)
+      expect(assigns(:analysis)).to eq({
+                                          "by_user_name"=>{"Fake User"=>6, "John Smith"=>3}, 
+                                          "by_page_views"=>{"visit-site"=>6, "login"=>3}, 
+                                          "per_user_by_page_views"=>{"Fake User"=>[{"page"=>"visit-site", "count"=>4}, {"page"=>"login", "count"=>2}], "John Smith"=>[{"page"=>"visit-site", "count"=>2}, {"page"=>"login", "count"=>1}]}, 
+                                          "by_hourly_views"=>{"01"=>6, "23"=>3}, 
+                                          "total"=>9, 
+                                          "count_by_day"=>count_by_day
+                                        })
     end
   end
 end
