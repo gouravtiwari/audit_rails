@@ -27,9 +27,9 @@
     <%= yield %>
     <div class='footer-container'>
       <div class='footer container'>
-        Copyright 2014 © Audit Rails
+        Copyright <%= Time.zone.today.year %> © Audit Rails
       </div>
     </div>
-    <%= javascript_include_tag "audit_rails/application" %> 
+    <%= javascript_include_tag "audit_rails/application" %>
   </body>
 </html>
