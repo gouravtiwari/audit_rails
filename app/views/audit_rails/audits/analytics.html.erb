@@ -14,17 +14,15 @@
   </div>
 </div>
 <br/>
-
 <div class='container theme-showcase'>
   <% if @analysis[:by_user_name] == {} %>
     <%= render partial: 'no_audits_available', locals: {no_audits: @no_audits} %>
   <% else %>
-    <%= render partial: 'sub_menu' %>
-    <br/>
     <%= render partial: 'user_clicks' %>
     <%= render partial: 'page_views' %>
     <%= render partial: 'hourly_views' %>
     <%= render partial: 'user_pages' %>
+    <%= render partial: 'sub_menu' %>
     <%#= render partial: 'page_views_by_user_bar' %>
     <%#= render partial: 'page_views_by_user_pie' %>
   <% end %>

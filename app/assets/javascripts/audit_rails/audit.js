@@ -39,33 +39,33 @@ $(document).ready(function(){
   });
 
   $('#user-clicks-zoomin').on('click', function(){
-    $('#user-clicks').fadeIn( "slow", function() {});
+    $('#user-clicks').show("fast", function(){});
   });
   $('#page-views-zoomin').on('click', function(){
-    $('#page-views').fadeIn( "slow", function() {});
+    $('#page-views').show("fast", function(){});
   });
   $('#hourly-views-zoomin').on('click', function(){
-    $('#hourly-views').fadeIn( "slow", function() {});
+    $('#hourly-views').show("fast", function(){});
   });
   $('#user-pages-zoomin').on('click', function(){
-    $('#user-pages').fadeIn( "slow", function() {});
-    $('per-user-by-pages-bar').fadeIn( "slow", function() {});
-    $('per-user-by-pages-pie').fadeIn( "slow", function() {});
+    $('#user-pages').show("fast", function(){});
+    $('per-user-by-pages-bar').show("fast", function(){});
+    $('per-user-by-pages-pie').show("fast", function(){});
   });
 
   $('#user-clicks-zoomout').on('click', function(){
-    $('#user-clicks').fadeOut( "slow", function() {});
+    $('#user-clicks').effect("puff", 'slow');
   });
   $('#page-views-zoomout').on('click', function(){
-    $('#page-views').fadeOut( "slow", function() {});
+    $('#page-views').effect("puff", 'slow');
   });
   $('#hourly-views-zoomout').on('click', function(){
-    $('#hourly-views').fadeOut( "slow", function() {});
+    $('#hourly-views').effect("puff", 'slow');
   });
   $('#user-pages-zoomout').on('click', function(){
-    $('#user-pages').fadeOut( "slow", function() {});
-    $('per-user-by-pages-bar').fadeOut( "slow", function() {});
-    $('per-user-by-pages-pie').fadeOut( "slow", function() {});
+    $('#user-pages').effect("puff", 'slow');
+    $('per-user-by-pages-bar').effect("puff", 'slow');
+    $('per-user-by-pages-pie').effect("puff", 'slow');
   });
 });
 

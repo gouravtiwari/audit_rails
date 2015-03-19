@@ -1,17 +1,17 @@
-<div id='hourly-views' class='overlay'>
-  <div data-attr-id="hourly-views" class="col-sm-12 overlay-section">
+<div id='hourly-views' class='overlay col-sm-12'>
+  <div data-attr-id="hourly-views" class="overlay-section">
     <div class="section-header">
       <div class="section-text">
         Hourly Views (UTC)
       </div>
-      <div class="section-count">
-        <%= @analysis[:total] %>
-      </div>
       <button id="hourly-views-zoomout" type="button" class="btn btn-default btn-lg section-zoom">
         <span class='glyphicon glyphicon-fullscreen large'></span>
       </button>
+      <div class="section-count">
+        <%= @analysis[:total] %>
+      </div>
     </div>
   </div>
 
-  <div id='hourlyViewsCount' data-visit-count='<%= @analysis[:by_hourly_views] %>'></div>
+  <div id='hourlyViewsCount' data-visit-count='<%= @analysis[:by_hourly_views] %>' class='chart-modal'></div>
 </div>

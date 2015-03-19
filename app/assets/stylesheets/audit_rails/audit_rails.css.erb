@@ -31,13 +31,13 @@
 .homepage-heading{
   font-family: HelveticaNeueLTStdLtCn;
   font-weight: bold;
-  font-size: 24px; 
+  font-size: 24px;
 }
 ul.homepage-content li,
 ol.homepage-content li,
 .homepage-content{
   font-family: HelveticaNeueLTStdLtCn;
-  font-size: 18px; 
+  font-size: 18px;
 }
 ul.error-explanation{
   margin:0;
@@ -80,7 +80,7 @@ ul.error-explanation li{
 }
 
 .left-navigation{
- min-height: 650px; 
+ min-height: 400px;
 }
 
 a.active-item, a.active-item:hover{
@@ -115,11 +115,11 @@ a.active-item span.badge{
 
 .section-header{
   height: 45px;
+  background-color: #33aeb8;
 }
 
 .section-text{
   color: white;
-  background-color: #33aeb8;
   padding: 15px;
   height: 100%;
   float: left;
@@ -130,7 +130,6 @@ a.active-item span.badge{
 }
 
 .section-count{
-  float: left;
   background-color: #006978;
   color: white;
   height: 45px;
@@ -138,12 +137,17 @@ a.active-item span.badge{
   font-size: 20px;
   width: 20%;
   text-align: center;
+  width: 70px;
+  float: right;
 }
 .section-count.disabled{
   background-color: #C7C7C7;
+  width: 70px;
+  float: right;
 }
 .section-zoom{
-  width: 20%;
+  width: 70px;
+  float: right;
 }
 
 .section-body{
@@ -188,17 +192,15 @@ input.download-report:hover{
   border-color: #e98e4e;
   border-radius: 0;
 }
-
 .overlay{
-  width: 92%;
-  height: 470px;
-  top: 410px;
-  position: absolute;
-  background-color: white;
-  margin: 0;
-  padding: 0;
+  min-width: 960px;
+  min-height: 470px;
+  position: relative;
+  display: none;
+  clear: both;
+  margin-left: 15px;
+  margin-bottom: 10px;
 }
-
 .overlay-section{
   margin: 0;
   padding: 0;
@@ -222,4 +224,8 @@ input.download-report:hover{
 }
 .bar:hover {
   fill: #e98e4e ;
+}
+.chart-modal{
+  background-color: white;
+  min-height: 400px;
 }

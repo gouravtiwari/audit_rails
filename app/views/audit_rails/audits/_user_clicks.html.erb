@@ -1,16 +1,16 @@
-<div id='user-clicks' class='overlay'>
-  <div data-attr-id="user-clicks" class="col-sm-12 overlay-section">
+<div id='user-clicks' class='overlay col-sm-12'>
+  <div data-attr-id="user-clicks" class="overlay-section">
     <div class="section-header">
       <div class="section-text">
         View by Users
       </div>
-      <div class="section-count">
-        <%= @analysis[:total] %>
-      </div>
       <button id="user-clicks-zoomout" type="button" class="btn btn-default btn-lg section-zoom">
         <span class='glyphicon glyphicon-fullscreen large'></span>
       </button>
+      <div class="section-count">
+        <%= @analysis[:total] %>
+      </div>
     </div>
   </div>
-  <div id='userViewsCount' data-visit-count='<%= @analysis[:by_user_name] %>'></div>
+  <div id='userViewsCount' data-visit-count='<%= @analysis[:by_user_name] %>' class='chart-modal'></div>
 </div>
