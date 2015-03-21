@@ -1,5 +1,8 @@
+== 2.0.10
+* UI bug fixes on Analytics page
+
 == 2.0.9
-* refactoring to remove code duplication, thanks to @flyingmachine
+* Refactoring to remove code duplication, thanks to @flyingmachine
 
 == 2.0.8
 * Color Pallette matching with theme
