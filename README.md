@@ -77,7 +77,9 @@ Use below link in views:
 
     link_to audit_rails.audits_path(:format => "xls")
 
-### To Do
+### What's next?
+  - Rails 4+ support
+  - ReactJS awesomeness
   - geoip integration
   - World Map Integration
 
