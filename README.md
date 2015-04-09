@@ -18,7 +18,7 @@ Now also has analytics(charts) for User counts
 ![Audits](https://github.com/gouravtiwari/audit_rails/raw/master/docs/audit-rails.png)
 
 ### Pre-requisites:
-For rails 4.0 & 3.2.6 + and ruby>1.9.2:
+For rails 4.x+ & 3.2.6 + and ruby>1.9.2:
 
     gem install audit_rails
 
@@ -29,7 +29,7 @@ or in application’s Gemfile add:
 ### Install
 
     rails g audit_rails:install
-    
+
 ### Usage
 #### To add audit migration:
 
@@ -44,7 +44,7 @@ Inherit from AuditRails::Audit:
     # MyApp/app/models/audit.rb
     class Audit < AuditRails::Audit
       # attr_accessible is only needed for Rails 3.2.6+ not needed for Rails 4+
-      attr_accessible :action, :controller, :description, :user_name, 
+      attr_accessible :action, :controller, :description, :user_name,
       :book_id
       # add associations as usual:
       belongs_to :book
@@ -56,7 +56,7 @@ Simply call 'add_to_audit' with desired parameters in any controller (as this is
 #### To override controller's add_to_audit method (or the helper method)
 Simply re-implement in application_controller.rb
 
-#### To track user login (one per day) 
+#### To track user login (one per day)
 Override current_user method in application controller, e.g.:
 
     def current_user
@@ -78,7 +78,7 @@ Use below link in views:
     link_to audit_rails.audits_path(:format => "xls")
 
 ### What's next?
-  - Rails 4+ support
+  - Rails 4+ support (Done: Tested with [example application](http://audit-rails.info) )
   - ReactJS awesomeness
   - geoip integration
   - World Map Integration
