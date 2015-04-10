@@ -1,13 +1,11 @@
 ## AuditRails
 [![Gem Version](https://badge.fury.io/rb/audit_rails.png)](http://badge.fury.io/rb/audit_rails)[![Build Status](https://travis-ci.org/gouravtiwari/audit_rails.png?branch=master)](https://travis-ci.org/gouravtiwari/audit_rails)[![Coverage Status](https://coveralls.io/repos/gouravtiwari/audit_rails/badge.png?branch=master)](https://coveralls.io/r/gouravtiwari/audit_rails?branch=master)[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/gouravtiwari/audit_rails/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
-An action based auditor, which has internal as well as outgoing link tracking.
+It generates audit-trails for your rails application and provide analytics out of the box!
 
 It is inspired from many great audit gems in rails community that audits model and I was looking for a gem which can audit based on actions as well as can audit link tracking. This gem just serve this purpose.
 
-Roughly it is doing similar to what Omniture does, but has very minimum features for now.
-
-Now also has analytics(charts) for User counts
+Roughly it is doing similar to what Omniture/Google Analytics does, but it your data remain within your app, so you can build custom charts as and when you wish.
 
 ### Example
 
