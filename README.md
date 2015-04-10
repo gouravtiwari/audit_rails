@@ -75,6 +75,10 @@ Use below link in views:
 
     link_to audit_rails.audits_path(:format => "xls")
 
+#### To restrict access to analytics page
+
+[Restrict access to Analytics](https://github.com/gouravtiwari/audit_rails/wiki#how-to-restrict-user-access-to-analytics-page)
+
 ### What's next?
   - Rails 4+ support (Done: Tested with [example application](http://audit-rails.info) )
   - ReactJS awesomeness
